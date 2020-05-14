@@ -1,0 +1,4372 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+.clearfix {
+  min-height: 1px;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+* html .clearfix {
+  height: 1px;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+body {
+  font-family: Lato, "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+/* iphone submit css reset */
+input[type="submit"],
+input[type="button"] {
+  border-radius: 10px;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+input[type="submit"]::-webkit-search-decoration,
+input[type="button"]::-webkit-search-decoration {
+  display: none;
+}
+
+input[type="submit"]::focus,
+input[type="button"]::focus {
+  outline-offset: -2px;
+}
+
+input,
+textarea {
+  border: 1px solid #9f9f9f;
+}
+
+.center {
+  text-align: center;
+}
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  body {
+    font-size: 5vw;
+    line-height: 1.4em;
+  }
+  /* slide in */
+  .anm_mod {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+    transition: all 1s ease;
+  }
+  .anm_mod.left {
+    transform: translate3d(-100%, 0, 0);
+  }
+  .anm_mod.right {
+    transform: translate3d(100%, 0, 0);
+  }
+  .anm_mod.delay {
+    transition: all 2s ease;
+  }
+  .anm_mod.fast {
+    transition: all 0.8 ease;
+  }
+  .animation .anm_mod.active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  .cont-ttl {
+    font-size: 200%;
+    text-align: center;
+    font-weight: bold;
+    color: #ed1941;
+    margin: 0 0 12px;
+    line-height: 1.1em;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  body {
+    font-size: 4.5vw;
+    line-height: 1.4em;
+  }
+  /* slide in */
+  .anm_mod {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+    transition: all 1s ease;
+  }
+  .anm_mod.left {
+    transform: translate3d(-100%, 0, 0);
+  }
+  .anm_mod.right {
+    transform: translate3d(100%, 0, 0);
+  }
+  .anm_mod.delay {
+    transition: all 2s ease;
+  }
+  .anm_mod.fast {
+    transition: all 0.8 ease;
+  }
+  .animation .anm_mod.active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  .cont-ttl {
+    font-size: 200%;
+    text-align: center;
+    font-weight: bold;
+    color: #ed1941;
+    margin: 0 0 16px;
+    line-height: 1.1em;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 20px;
+    line-height: 1.4em;
+  }
+  .cont-ttl {
+    font-size: 240%;
+    text-align: center;
+    font-weight: bold;
+    color: #ed1941;
+    margin: 0 0 16px;
+  }
+  .sp {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  body {
+    font-size: 20px;
+    line-height: 1.8em;
+  }
+  .container {
+    width: 1024px;
+    margin: 0 auto;
+  }
+  .cont-ttl {
+    font-size: 240%;
+    text-align: center;
+    font-weight: bold;
+    color: #ed1941;
+    margin: 0 0 16px;
+  }
+  .sp {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .logo {
+    width: 40%;
+    margin: 12px 0 0 5%;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .logo {
+    width: 35%;
+    margin: 4px 0 0 5%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .logo {
+    width: 30%;
+    margin: 0 0 0 5%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .logo {
+    width: 230px;
+    margin: 0 0 0 40px;
+  }
+}
+
+/* nav */
+.wrapper {
+  height: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.overlay {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  background-color: rgba(80, 80, 80, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.overlay.open {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+main {
+  height: 100%;
+  transition: all .5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main.open {
+  transform: translateX(-250px);
+}
+
+.menu-trigger {
+  display: inline-block;
+  width: 36px;
+  height: 28px;
+  vertical-align: middle;
+  cursor: pointer;
+  position: fixed;
+  top: 30px;
+  right: 32px;
+  z-index: 100;
+}
+
+.menu-trigger span {
+  display: inline-block;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #acacac;
+  transition: all .5s;
+}
+
+.menu-trigger.active span {
+  background-color: #acacac;
+}
+
+.menu-trigger span:nth-of-type(1) {
+  top: 0;
+}
+
+.menu-trigger.active span:nth-of-type(1) {
+  transform: translateY(12px) rotate(-45deg);
+}
+
+.menu-trigger span:nth-of-type(2) {
+  top: 12px;
+}
+
+.menu-trigger.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.menu-trigger span:nth-of-type(3) {
+  bottom: 0;
+}
+
+.menu-trigger.active span:nth-of-type(3) {
+  transform: translateY(-12px) rotate(45deg);
+}
+
+nav {
+  width: 250px;
+  height: 100%;
+  padding-top: 70px;
+  background-color: #eee;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  transform: translate(250px);
+  transition: all .5s;
+  overflow: scroll;
+}
+
+nav.open {
+  transform: translateZ(0);
+}
+
+nav li {
+  color: #555;
+  text-align: center;
+  padding: 10px 0;
+}
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  footer {
+    margin: 32px 0 0;
+  }
+  .fb {
+    font-size: 90%;
+    background: #ed1941;
+    padding: 16px 0;
+    text-align: center;
+  }
+  .fb a {
+    color: #fff;
+  }
+  .fa-facebook {
+    margin: 0 .7em 0 0;
+  }
+  .footer-nav {
+    font-size: 80%;
+    background: #000;
+    padding: 16px 0;
+  }
+  .footer-nav a {
+    color: #fff;
+  }
+  .footer-nav p {
+    width: 33%;
+    float: left;
+    text-align: center;
+  }
+  .copy-right {
+    text-align: center;
+    font-size: 90%;
+    padding: 8px 0 0;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  footer {
+    margin: 32px 0 0;
+  }
+  .fb {
+    background: #ed1941;
+    padding: 16px 0;
+    text-align: center;
+  }
+  .fb a {
+    color: #fff;
+  }
+  .fa-facebook {
+    margin: 0 .7em 0 0;
+  }
+  .footer-nav {
+    font-size: 80%;
+    background: #000;
+    padding: 16px 0;
+  }
+  .footer-nav a {
+    color: #fff;
+  }
+  .footer-nav p {
+    width: 33%;
+    float: left;
+    text-align: center;
+  }
+  .copy-right {
+    text-align: center;
+    font-size: 90%;
+    padding: 8px 0 0;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* nav */
+  nav ul a li:hover {
+    color: #ed1941;
+  }
+  /* footer */
+  footer {
+    margin: 32px 0 0;
+  }
+  .fb {
+    background: #ed1941;
+    padding: 16px 0;
+    text-align: center;
+  }
+  .fb a {
+    color: #fff;
+  }
+  .fa-facebook {
+    margin: 0 .7em 0 0;
+  }
+  .footer-nav {
+    background: #000;
+    padding: 24px 0 32px;
+  }
+  .footer-nav a {
+    color: #fff;
+  }
+  .footer-nav p {
+    width: 33%;
+    float: left;
+    text-align: center;
+  }
+  .copy-right {
+    text-align: center;
+    font-size: 90%;
+    padding: 8px 0 0;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  /* nav */
+  nav ul a li:hover {
+    color: #ed1941;
+  }
+  /* footer */
+  footer {
+    margin: 32px 0 0;
+  }
+  .fb {
+    background: #ed1941;
+    padding: 16px 0;
+    text-align: center;
+  }
+  .fb a {
+    color: #fff;
+  }
+  .fa-facebook {
+    margin: 0 .7em 0 0;
+  }
+  .footer-nav {
+    background: #000;
+    padding: 24px 0 48px;
+  }
+  .footer-nav a {
+    color: #fff;
+  }
+  .footer-nav p {
+    width: 33%;
+    float: left;
+    text-align: center;
+  }
+  .copy-right {
+    text-align: center;
+    font-size: 90%;
+    padding: 8px 0 0;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  /* top共通 */
+  .ttl {
+    font-size: 200%;
+    font-weight: bold;
+    color: #ed1941;
+    text-align: center;
+  }
+  /* exam/textBook */
+  .top-exam {
+    position: relative;
+    margin: 0 0 230px;
+  }
+  .top-exam-bg {
+    display: none;
+  }
+  .top-exam-img {
+    width: 80%;
+  }
+  .top-exam-desc {
+    position: absolute;
+    left: 20%;
+    top: 100px;
+    width: 74%;
+    background: #ed1941;
+    color: #fff;
+    padding: 12px 3%;
+  }
+  .top-exam-desc-ttl {
+    font-weight: bold;
+    font-size: 200%;
+    margin: 0 0 12px;
+  }
+  .top-exam-desc-more {
+    background: #fff;
+    color: #ed1941;
+    width: 46%;
+    margin: 12px auto 0;
+    padding: 8px 0;
+    text-align: center;
+    font-weight: bold;
+  }
+  .top-textBook {
+    position: relative;
+    margin: 0 0 35%;
+  }
+  .top-textBook-desc {
+    width: 74%;
+    background: #ed1941;
+    color: #fff;
+    padding: 12px 3%;
+  }
+  .top-textBook-desc-ttl {
+    font-weight: bold;
+    font-size: 200%;
+    margin: 0 0 12px;
+  }
+  .top-textBook-desc-more {
+    background: #fff;
+    color: #ed1941;
+    width: 46%;
+    margin: 12px 0 0;
+    padding: 8px 0;
+    text-align: center;
+    font-weight: bold;
+  }
+  .top-textBook-img {
+    width: 60%;
+    position: absolute;
+    right: 0;
+    bottom: -42%;
+  }
+  /* seminar */
+  .course {
+    background: #f1f2f2;
+    padding: 32px 0;
+  }
+  .top-class-cont {
+    margin: 48px 0 0;
+  }
+  .course-desc {
+    width: 96%;
+    margin: 16px 2%;
+  }
+  .course-img {
+    width: 96%;
+    margin: 0 2%;
+  }
+  .course-more {
+    display: inline-block;
+    width: 60%;
+    margin: 16px auto 0;
+    padding: 8px 0;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    background: #ed1941;
+  }
+  /* about */
+  .about {
+    padding: 32px 0;
+  }
+  .about-desc {
+    width: 96%;
+    margin: 16px 2%;
+  }
+  .about-cont {
+    width: 90%;
+    margin: 0 5% 40px;
+    position: relative;
+  }
+  .about-submit {
+    position: absolute;
+    left: 0;
+    bottom: -16px;
+    width: 70%;
+    margin: 0 15%;
+    padding: 8px 0;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    background: #ed1941;
+  }
+  .about-submit a {
+    color: #fff;
+  }
+  .mistakes {
+    width: 96%;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  .mistakes a {
+    color: #ed1941;
+  }
+  /* faq */
+  .faq {
+    padding: 32px 0 0;
+  }
+  .faq-ttl {
+    font-size: 200%;
+    font-weight: bold;
+    color: #ed1941;
+    text-align: center;
+    margin: 0 0 24px;
+  }
+  /* quiz */
+  .quiz {
+    width: 96%;
+    margin: 0 2%;
+  }
+  .quiz-submit {
+    width: 80%;
+    margin: 24px 10% 0;
+    padding: 16px 0;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 120%;
+    background: #ed1941;
+  }
+  .quiz-submit a {
+    color: #fff;
+  }
+  .quiz-link {
+    margin: 24px 0 0;
+    font-size: 120%;
+    text-align: center;
+  }
+  .quiz-link a {
+    color: #231f20;
+  }
+  .quiz-qr {
+    display: none;
+  }
+  .quiz-logo {
+    width: 60%;
+    margin: 24px 20% 0;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  /* top共通 */
+  .ttl {
+    font-size: 200%;
+    font-weight: bold;
+    color: #ed1941;
+    text-align: center;
+  }
+  /* exam/textBook */
+  .top-exam {
+    position: relative;
+    margin: 0 0 200px;
+  }
+  .top-exam-bg {
+    display: none;
+  }
+  .top-exam-img {
+    width: 80%;
+  }
+  .top-exam-desc {
+    position: absolute;
+    left: 20%;
+    top: 100px;
+    width: 74%;
+    background: #ed1941;
+    color: #fff;
+    padding: 16px 3%;
+  }
+  .top-exam-desc-ttl {
+    font-weight: bold;
+    font-size: 200%;
+    margin: 0 0 12px;
+  }
+  .top-exam-desc-more {
+    background: #fff;
+    color: #ed1941;
+    width: 46%;
+    margin: 12px auto 0;
+    padding: 8px 0;
+    text-align: center;
+    font-weight: bold;
+  }
+  .top-textBook {
+    position: relative;
+    margin: 0 0 40%;
+  }
+  .top-textBook-desc {
+    width: 74%;
+    background: #ed1941;
+    color: #fff;
+    padding: 16px 3%;
+  }
+  .top-textBook-desc-ttl {
+    font-weight: bold;
+    font-size: 200%;
+    margin: 0 0 12px;
+  }
+  .top-textBook-desc-more {
+    background: #fff;
+    color: #ed1941;
+    width: 46%;
+    margin: 12px 0 0;
+    padding: 8px 0;
+    text-align: center;
+    font-weight: bold;
+  }
+  .top-textBook-img {
+    width: 60%;
+    position: absolute;
+    right: 0;
+    bottom: -52%;
+  }
+  /* seminar */
+  .course {
+    background: #f1f2f2;
+    padding: 32px 0;
+  }
+  .top-class-cont {
+    margin: 60px 0 0;
+  }
+  .course-desc {
+    width: 96%;
+    margin: 16px 2%;
+  }
+  .course-img {
+    width: 80%;
+    margin: 0 10%;
+  }
+  .course-more {
+    display: inline-block;
+    width: 50%;
+    margin: 16px auto 0;
+    padding: 8px 0;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    background: #ed1941;
+  }
+  /* about */
+  .about {
+    padding: 32px 0;
+  }
+  .about-desc {
+    width: 96%;
+    margin: 16px 2%;
+  }
+  .about-cont {
+    width: 90%;
+    margin: 0 5% 40px;
+    position: relative;
+  }
+  .about-img {
+    width: 80%;
+    margin: 0 10%;
+  }
+  .about-submit {
+    position: absolute;
+    left: 0;
+    bottom: -16px;
+    width: 70%;
+    margin: 0 15%;
+    padding: 8px 0;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    background: #ed1941;
+  }
+  .about-submit a {
+    color: #fff;
+  }
+  .about-submit a:hover {
+    text-decoration: underline;
+  }
+  /* faq */
+  .faq {
+    padding: 32px 0 0;
+  }
+  .faq-ttl {
+    font-size: 200%;
+    font-weight: bold;
+    color: #ed1941;
+    text-align: center;
+    margin: 0 0 24px;
+  }
+  .mistakes {
+    width: 96%;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  .mistakes a {
+    color: #ed1941;
+  }
+  .mistakes a:hover {
+    text-decoration: underline;
+  }
+  /* quiz */
+  .quiz {
+    width: 96%;
+    margin: 0 2%;
+  }
+  .quiz-submit {
+    width: 80%;
+    margin: 24px 10% 0;
+    padding: 16px 0;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 120%;
+    background: #ed1941;
+  }
+  .quiz-submit a {
+    color: #fff;
+  }
+  .quiz-link {
+    margin: 24px 0 0;
+    font-size: 120%;
+    text-align: center;
+  }
+  .quiz-link a {
+    color: #231f20;
+  }
+  .quiz-qr {
+    display: none;
+  }
+  .quiz-logo {
+    width: 50%;
+    margin: 24px 25% 0;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* top 共通 */
+  .ttl {
+    font-size: 200%;
+    font-weight: bold;
+    color: #ed1941;
+    text-align: center;
+  }
+  /* exam / textBook */
+  .top-exam,
+  .top-textBook {
+    display: flex;
+  }
+  .top-exam-img {
+    display: none;
+  }
+  .top-exam-bg {
+    width: 50%;
+    background-image: url("../image/exam.png");
+    background-size: cover;
+    background-position: 100% 0%;
+  }
+  .top-exam-desc {
+    width: 42%;
+    background: #ed1941;
+    color: #fff;
+    padding: 40px 4%;
+  }
+  .top-exam-desc-ttl {
+    font-weight: bold;
+    font-size: 200%;
+    margin: 0 0 24px;
+  }
+  .top-exam-desc-more {
+    background: #fff;
+    color: #ed1941;
+    width: 46%;
+    padding: 8px 0;
+    text-align: center;
+    margin: 32px 0 0 54%;
+    font-weight: bold;
+  }
+  .top-textBook-desc {
+    width: 42%;
+    background: #ed1941;
+    color: #fff;
+    padding: 40px 4%;
+  }
+  .top-textBook-desc-ttl {
+    font-weight: bold;
+    font-size: 200%;
+    margin: 0 0 24px;
+  }
+  .top-textBook-desc-more {
+    background: #fff;
+    color: #ed1941;
+    width: 46%;
+    padding: 8px 0;
+    text-align: center;
+    margin: 32px 0 0;
+    font-weight: bold;
+  }
+  .top-textBook-img {
+    width: 50%;
+    position: relative;
+    background: #fff;
+  }
+  .top-textBook-img img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: -10%;
+  }
+  /* seminar */
+  .course {
+    background: #f1f2f2;
+    padding: 80px 0 56px;
+  }
+  .seminar-cont {
+    width: 50%;
+    float: left;
+  }
+  .top-class-cont {
+    width: 50%;
+    float: left;
+  }
+  .course-desc {
+    width: 90%;
+    margin: 24px 5%;
+  }
+  .course-img {
+    width: 96%;
+    margin: 0 2%;
+  }
+  .course-more {
+    display: inline-block;
+    width: 44%;
+    margin: 24px auto 0;
+    padding: 8px 0;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    background: #ed1941;
+  }
+  /* about */
+  .about {
+    padding: 80px 0 56px;
+  }
+  .about-desc {
+    width: 96%;
+    margin: 24px 2%;
+  }
+  .about-cont {
+    width: 32%;
+    float: left;
+  }
+  .about-center-cont {
+    margin: 0 2%;
+  }
+  .about-submit {
+    width: 70%;
+    margin: 16px auto 0;
+    padding: 8px 0;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    background: #ed1941;
+  }
+  .about-submit a {
+    color: #fff;
+  }
+  .about-submit a:hover {
+    text-decoration: underline;
+  }
+  /* faq */
+  .faq {
+    padding: 80px 0 24px;
+  }
+  .faq-ttl {
+    font-size: 200%;
+    font-weight: bold;
+    color: #ed1941;
+    text-align: center;
+    margin: 0 0 24px;
+  }
+  .mistakes {
+    text-align: center;
+  }
+  .mistakes a {
+    color: #ed1941;
+  }
+  .mistakes a:hover {
+    text-decoration: underline;
+  }
+  /* quiz */
+  .quiz {
+    width: 96%;
+    margin: 0 2%;
+    padding: 32px 0;
+  }
+  .quiz-info {
+    width: 50%;
+    float: left;
+  }
+  .quiz-submit {
+    width: 70%;
+    margin: 24px 0 0;
+    padding: 12px 0;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 120%;
+    background: #ed1941;
+  }
+  .quiz-submit a {
+    color: #fff;
+  }
+  .quiz-submit a:hover {
+    text-decoration: underline;
+  }
+  .quiz-link {
+    margin: 24px 0 0;
+    font-size: 120%;
+  }
+  .quiz-link a {
+    color: #231f20;
+  }
+  .quiz-qr {
+    width: 25%;
+    float: left;
+  }
+  .quiz-qr img {
+    width: 70%;
+  }
+  .quiz-logo {
+    width: 25%;
+    float: left;
+  }
+  .quiz-logo img {
+    width: 70%;
+    margin: 0 15%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  /* top 共通 */
+  .ttl {
+    font-size: 300%;
+    font-weight: bold;
+    color: #ed1941;
+    text-align: center;
+  }
+  /* exam/textBook */
+  .top-exam,
+  .top-textBook {
+    display: flex;
+  }
+  .top-exam-img {
+    display: none;
+  }
+  .top-exam-bg {
+    width: 50%;
+    background-image: url("../image/exam.png");
+    background-size: cover;
+    background-position: 100% 0%;
+  }
+  .top-exam-desc {
+    width: 50%;
+    background: #ed1941;
+    color: #fff;
+    padding: 64px 0;
+  }
+  .top-exam-desc-ttl {
+    font-weight: bold;
+    font-size: 300%;
+    width: 400px;
+    margin: 0 0 48px 112px;
+  }
+  .top-exam-desc-text {
+    width: 400px;
+    margin: 0 0 0 112px;
+  }
+  .top-exam-desc-more {
+    background: #fff;
+    color: #ed1941;
+    width: 250px;
+    padding: 12px 0;
+    text-align: center;
+    margin: 32px 0 0 262px;
+    font-weight: bold;
+    font-size: 120%;
+  }
+  .top-textBook-desc {
+    width: 50%;
+    background: #ed1941;
+    color: #fff;
+    padding: 64px 0;
+  }
+  .top-textBook-desc-ttl {
+    float: right;
+    font-weight: bold;
+    font-size: 300%;
+    width: 400px;
+    margin: 0 112px 48px 0;
+  }
+  .top-textBook-desc-text {
+    float: right;
+    width: 400px;
+    margin: 0 112px 0 0;
+  }
+  .top-textBook-desc-more {
+    float: right;
+    background: #fff;
+    color: #ed1941;
+    width: 250px;
+    padding: 12px 0;
+    text-align: center;
+    margin: 32px 262px 0 0;
+    font-weight: bold;
+    font-size: 120%;
+  }
+  .top-textBook-img {
+    width: 50%;
+    position: relative;
+    background: #fff;
+  }
+  .top-textBook-img img {
+    position: absolute;
+    width: 552px;
+    top: 30px;
+    left: -40px;
+  }
+  /* seminar */
+  .course {
+    background: #f1f2f2;
+    padding: 100px 0 64px;
+  }
+  .seminar-cont {
+    width: 50%;
+    float: left;
+  }
+  .top-class-cont {
+    width: 50%;
+    float: left;
+  }
+  .course-desc {
+    width: 90%;
+    margin: 24px 5%;
+  }
+  .course-img {
+    width: 96%;
+    margin: 0 2%;
+  }
+  .course-more {
+    display: inline-block;
+    width: 250px;
+    margin: 24px auto 0;
+    padding: 12px 0;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 120%;
+    background: #ed1941;
+  }
+  /* about */
+  .about {
+    padding: 100px 0 64px;
+  }
+  .about-desc {
+    margin: 24px 0;
+  }
+  .about-cont {
+    width: 32%;
+    float: left;
+  }
+  .about-center-cont {
+    margin: 0 2%;
+  }
+  .about-submit {
+    width: 250px;
+    margin: 24px auto 0;
+    padding: 12px 0;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 120%;
+    background: #ed1941;
+  }
+  .about-submit a {
+    color: #fff;
+  }
+  .about-submit a:hover {
+    text-decoration: underline;
+  }
+  /* faq */
+  .faq {
+    padding: 100px 0 32px;
+  }
+  .faq-ttl {
+    font-size: 200%;
+    font-weight: bold;
+    color: #ed1941;
+    text-align: center;
+    margin: 0 0 24px;
+  }
+  .mistakes {
+    text-align: center;
+  }
+  .mistakes a {
+    color: #ed1941;
+  }
+  .mistakes a:hover {
+    text-decoration: underline;
+  }
+  /* quiz */
+  .quiz {
+    padding: 32px 0;
+  }
+  .quiz-info {
+    width: 50%;
+    float: left;
+  }
+  .quiz-submit {
+    width: 300px;
+    margin: 24px 0 0;
+    padding: 12px 0;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 120%;
+    background: #ed1941;
+  }
+  .quiz-submit a {
+    color: #fff;
+  }
+  .quiz-submit a:hover {
+    text-decoration: underline;
+  }
+  .quiz-link {
+    margin: 32px 0 0;
+    font-size: 120%;
+  }
+  .quiz-link a {
+    color: #231f20;
+  }
+  .quiz-qr {
+    width: 25%;
+    float: left;
+  }
+  .quiz-qr img {
+    width: 70%;
+  }
+  .quiz-logo {
+    width: 25%;
+    float: left;
+  }
+  .quiz-logo img {
+    width: 70%;
+    margin: 0 15%;
+  }
+}
+
+.screen-reader-response {
+  display: none;
+}
+
+.wpcf7-validation-errors {
+  margin: 16px 0 0;
+  color: #ed1941;
+  font-size: 90%;
+  text-align: center;
+}
+
+.wpcf7-mail-sent-ok {
+  margin: 16px 0 0;
+  color: #28d400;
+  text-align: center;
+}
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .inquiry {
+    width: 96%;
+    margin: 0 2%;
+    background: #ebebeb;
+    padding: 32px 0;
+  }
+  .inquiry-cont-ttl {
+    font-size: 200%;
+    text-align: center;
+    font-weight: bold;
+    color: #ed1941;
+  }
+  .inquiry-form {
+    width: 90%;
+    margin: 24px 5% 0;
+  }
+  .inquiry-p {
+    margin: 0 0 .7em;
+  }
+  .inquiry-ttl {
+    width: 40%;
+  }
+  .wpcf7-text {
+    height: 2em;
+    width: 100%;
+  }
+  .wpcf7-textarea {
+    width: 100%;
+  }
+  .wpcf7-list-item {
+    margin: 0 1em 0 0;
+  }
+  .wpcf7-submit {
+    width: 60%;
+    margin: 24px 20% 0;
+    background: #ed1941;
+    color: #fff;
+    padding: 8px 0;
+    text-align: center;
+    font-size: 160%;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  /* inquiry-form */
+  .inquiry {
+    width: 96%;
+    margin: 0 2%;
+    background: #ebebeb;
+    padding: 32px 0;
+  }
+  .inquiry-cont-ttl {
+    font-size: 200%;
+    text-align: center;
+    font-weight: bold;
+    color: #ed1941;
+  }
+  .inquiry-form {
+    width: 90%;
+    margin: 24px 5% 0;
+  }
+  .inquiry-p {
+    margin: 0 0 .7em;
+  }
+  .inquiry-ttl {
+    width: 40%;
+  }
+  .wpcf7-text {
+    height: 2em;
+    width: 100%;
+  }
+  .wpcf7-textarea {
+    width: 100%;
+  }
+  .wpcf7-list-item {
+    margin: 0 1em 0 0;
+  }
+  .wpcf7-submit {
+    width: 60%;
+    margin: 24px 20% 0;
+    background: #ed1941;
+    color: #fff;
+    padding: 8px 0;
+    text-align: center;
+    font-size: 160%;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* inquiry-form */
+  .inquiry {
+    width: 96%;
+    margin: 0 auto;
+    background: #ebebeb;
+    padding: 80px 0;
+  }
+  .inquiry-cont-ttl {
+    font-size: 200%;
+    text-align: center;
+    font-weight: bold;
+    color: #ed1941;
+  }
+  .inquiry-form {
+    width: 60%;
+    margin: 24px 20% 0;
+  }
+  .inquiry-p {
+    margin: 0 0 .7em;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .inquiry-ttl {
+    width: 40%;
+    float: left;
+  }
+  .wpcf7-text {
+    height: 2em;
+  }
+  .wpcf7-list-item {
+    margin: 0 1em 0 0;
+  }
+  .wpcf7-submit {
+    width: 50%;
+    margin: 24px 25% 0;
+    background: #ed1941;
+    color: #fff;
+    padding: 8px 0;
+    text-align: center;
+    font-size: 160%;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  /* inquiry-form */
+  .inquiry {
+    background: #ebebeb;
+    padding: 80px 0;
+  }
+  .inquiry-cont-ttl {
+    font-size: 240%;
+    text-align: center;
+    font-weight: bold;
+    color: #ed1941;
+  }
+  .inquiry-form {
+    width: 50%;
+    margin: 24px 25% 0;
+  }
+  #class-inquiry .inquiry-form {
+    width: 60%;
+    margin: 24px 20% 0;
+  }
+  .inquiry-p {
+    margin: 0 0 .7em;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .inquiry-ttl {
+    width: 26%;
+    float: left;
+  }
+  .wpcf7-text {
+    height: 2em;
+  }
+  .wpcf7-list-item {
+    margin: 0 1em 0 0;
+  }
+  .wpcf7-submit {
+    width: 40%;
+    margin: 24px 30% 0;
+    background: #ed1941;
+    color: #fff;
+    padding: 8px 0;
+    text-align: center;
+    font-size: 160%;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .exam-eyecatch {
+    background-image: url("../image/exam_eyecatch.png");
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 40px 0 80px;
+  }
+  .exam-pageTtl {
+    color: #ed1941;
+    font-size: 250%;
+    font-weight: bold;
+    margin: 0 0 0 5%;
+  }
+  .exam-about {
+    background: #ed1941;
+    color: #fff;
+    padding: 32px 0;
+  }
+  .exam-about-ttl {
+    font-size: 200%;
+    text-align: center;
+    font-weight: bold;
+  }
+  .exam-about-desc {
+    width: 96%;
+    margin: 16px 2% 0;
+  }
+  .exam-about-desc div {
+    margin: 0 0 12px;
+  }
+  .exam-about-desc table {
+    border: 1px solid #fff;
+  }
+  .exam-about-desc table tr {
+    padding: 4px 0;
+    border-top: 1px solid #fff;
+  }
+  .exam-about-desc table tr th {
+    border-right: 1px solid #fff;
+    padding: 0 1%;
+    width: 28%;
+    background: #ad0101;
+  }
+  .exam-about-desc table tr td {
+    padding: 0 1%;
+  }
+  .exam-benefits {
+    width: 96%;
+    margin: 0 2%;
+    padding: 32px 0;
+  }
+  .exam-benefits-ttl {
+    font-size: 200%;
+    text-align: center;
+    font-weight: bold;
+    color: #ed1941;
+  }
+  .exam-benefits-cont-ttls {
+    display: none;
+  }
+  .sp-exam-benefits-cont-ttl {
+    font-size: 120%;
+    text-align: center;
+    font-weight: bold;
+    color: #ed1941;
+  }
+  .exam-benefits-cont {
+    width: 96%;
+    margin: 32px 2% 0;
+  }
+  .exam-benefits-cont-desc {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .exam-eyecatch {
+    background-image: url("../image/exam_eyecatch.png");
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 40px 0 120px;
+  }
+  .exam-pageTtl {
+    color: #ed1941;
+    font-size: 250%;
+    font-weight: bold;
+    margin: 0 0 0 5%;
+  }
+  .exam-about {
+    background: #ed1941;
+    color: #fff;
+    padding: 32px 0;
+  }
+  .exam-about-ttl {
+    font-size: 200%;
+    text-align: center;
+    font-weight: bold;
+  }
+  .exam-about-desc {
+    width: 96%;
+    margin: 16px 2% 0;
+  }
+  .exam-about-desc div {
+    margin: 0 0 16px;
+  }
+  .exam-about-desc table {
+    border: 1px solid #fff;
+  }
+  .exam-about-desc table tr {
+    border-top: 1px solid #fff;
+  }
+  .exam-about-desc table tr th {
+    border-right: 1px solid #fff;
+    padding: 8px 1%;
+    width: 30%;
+    background: #ad0101;
+  }
+  .exam-about-desc table tr td {
+    padding: 8px 1%;
+  }
+  .exam-benefits {
+    width: 96%;
+    margin: 0 2%;
+    padding: 32px 0;
+  }
+  .exam-benefits-ttl {
+    font-size: 200%;
+    text-align: center;
+    font-weight: bold;
+    color: #ed1941;
+  }
+  .exam-benefits-cont-ttls {
+    display: none;
+  }
+  .exam-benefits-cont {
+    width: 96%;
+    margin: 32px 2% 0;
+  }
+  .sp-exam-benefits-cont-ttl {
+    font-size: 120%;
+    text-align: center;
+    font-weight: bold;
+    color: #ed1941;
+  }
+  .exam-benefits-cont-img {
+    width: 80%;
+    margin: 12px 10% 0;
+  }
+  .exam-benefits-cont-desc {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .exam-eyecatch {
+    background-image: url("../image/exam_eyecatch.png");
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 100px 0 120px;
+  }
+  .exam-pageTtl {
+    color: #ed1941;
+    font-size: 250%;
+    font-weight: bold;
+    margin: 0 0 0 10%;
+  }
+  .exam-about {
+    background: #ed1941;
+    color: #fff;
+    padding: 64px 0;
+  }
+  .exam-about-ttl {
+    font-size: 200%;
+    text-align: center;
+    font-weight: bold;
+  }
+  .exam-about-desc {
+    width: 96%;
+    margin: 32px 2% 0;
+  }
+  .exam-about-desc div {
+    margin: 0 0 16px;
+  }
+  .exam-about-desc table {
+    border: 1px solid #fff;
+  }
+  .exam-about-desc table tr {
+    border-top: 1px solid #fff;
+  }
+  .exam-about-desc table tr th {
+    border-right: 1px solid #fff;
+    padding: 12px 1%;
+    width: 30%;
+    background: #ad0101;
+  }
+  .exam-about-desc table tr td {
+    padding: 12px 1%;
+  }
+  .exam-benefits {
+    padding: 80px 0;
+  }
+  .exam-benefits-ttl {
+    font-size: 200%;
+    text-align: center;
+    font-weight: bold;
+    color: #ed1941;
+  }
+  .exam-benefits-conts {
+    margin: 32px 0 0;
+  }
+  .exam-benefits-cont {
+    width: 98%;
+    margin: 0 1%;
+  }
+  .sp-exam-benefits-cont-ttl {
+    font-size: 120%;
+    text-align: center;
+    font-weight: bold;
+    color: #ed1941;
+  }
+  .exam-benefits-cont-img {
+    width: 60%;
+    margin: 12px 20% 24px;
+  }
+  .exam-benefits-cont-desc {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .exam-eyecatch {
+    background-image: url("../image/exam_eyecatch.png");
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 140px 0 180px;
+  }
+  .exam-pageTtl {
+    color: #ed1941;
+    font-size: 350%;
+    font-weight: bold;
+  }
+  .exam-about {
+    background: #ed1941;
+    color: #fff;
+    padding: 80px 0;
+  }
+  .exam-about-ttl {
+    font-size: 240%;
+    text-align: center;
+    font-weight: bold;
+  }
+  .exam-about-desc {
+    margin: 32px 0 0;
+  }
+  .exam-about-desc div {
+    margin: 0 0 16px;
+    text-align: center;
+  }
+  .exam-about-desc table {
+    margin: 0 auto;
+    border: 1px solid #fff;
+  }
+  .exam-about-desc table tr {
+    border-top: 1px solid #fff;
+  }
+  .exam-about-desc table tr th {
+    border-right: 1px solid #fff;
+    padding: 12px 1%;
+    width: 30%;
+    background: #ad0101;
+    text-align: center;
+  }
+  .exam-about-desc table tr td {
+    padding: 12px 1%;
+  }
+  .exam-benefits {
+    padding: 80px 0;
+  }
+  .exam-benefits-ttl {
+    font-size: 240%;
+    text-align: center;
+    font-weight: bold;
+    color: #ed1941;
+  }
+  .exam-benefits-conts {
+    margin: 32px 0 0;
+  }
+  .sp-exam-benefits-cont-ttl {
+    font-size: 120%;
+    text-align: center;
+    font-weight: bold;
+    color: #ed1941;
+  }
+  .exam-benefits-cont-img {
+    width: 50%;
+    margin: 12px 25% 24px;
+  }
+  .exam-benefits-cont-desc {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .textbook-eyecatch {
+    background-image: url("../image/sp_textbook_eyecatch.png");
+    background-size: cover;
+    background-position: 50% 50%;
+    color: #fff;
+    padding: 40px 0 80px;
+  }
+  .textbook-pageTtl {
+    font-size: 250%;
+    font-weight: bold;
+    margin: 0 0 0 5%;
+  }
+  .textbook-desc {
+    width: 96%;
+    margin: 32px 2%;
+  }
+  .textbook-desc p {
+    margin: 0 0 12px;
+  }
+  .textbook-conts {
+    display: none;
+  }
+  .sp-textbook-conts {
+    width: 96%;
+    border: 2px solid #e1e1e1;
+    box-sizing: border-box;
+    padding: 16px 2%;
+    margin: 0 2% 32px;
+  }
+  .sp-textbook-conts .textbook-copy ul {
+    list-style: disc;
+    padding: 0 0 0 7%;
+  }
+  .sp-textbook-conts .textbook-copy ul li {
+    margin: 8px 0;
+  }
+  .textbook-cont-ttl {
+    color: #ed1941;
+    font-size: 200%;
+    margin: 0 0 16px;
+  }
+  .textbook-cont-details {
+    margin: 16px 0 0;
+  }
+  .textbook-cont-img {
+    width: 60%;
+    float: left;
+    margin: 0 4% 0 0;
+  }
+  .textbook-cont-priceDetails {
+    width: 36%;
+    float: left;
+  }
+  .textbook-cont-price {
+    background: #ebebeb;
+    border: 1px solid #acacac;
+    text-align: center;
+    font-size: 120%;
+    padding: 4px 0;
+    margin: 16px 0;
+  }
+  .textbook-cont-icon {
+    width: 60px;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    margin: 32px auto;
+  }
+  .textbook-cont-icon a {
+    color: #fff;
+  }
+  .fa-shopping-cart {
+    width: 100%;
+    padding: 15px 0;
+    background: #f05665;
+    border-radius: 50%;
+  }
+  .fa-envelope {
+    width: 100%;
+    padding: 15px 0;
+    background: #f99d1b;
+    border-radius: 50%;
+  }
+  .textbook-details-img {
+    background: #e6e7e8;
+    padding: 16px 2.5% 8px;
+  }
+  .textbook-details-img img {
+    width: 18%;
+    margin: 0 1%;
+    float: left;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .textbook-eyecatch {
+    background-image: url("../image/sp_textbook_eyecatch.png");
+    background-size: cover;
+    background-position: 50% 50%;
+    color: #fff;
+    padding: 40px 0 120px;
+  }
+  .textbook-pageTtl {
+    font-size: 250%;
+    font-weight: bold;
+    margin: 0 0 0 5%;
+  }
+  .textbook-desc {
+    width: 96%;
+    margin: 32px 2%;
+  }
+  .textbook-desc p {
+    margin: 0 0 12px;
+  }
+  .textbook-conts {
+    display: none;
+  }
+  .sp-textbook-conts {
+    width: 96%;
+    border: 2px solid #e1e1e1;
+    box-sizing: border-box;
+    padding: 16px 2%;
+    margin: 0 2% 32px;
+  }
+  .sp-textbook-conts .textbook-copy ul {
+    list-style: disc;
+    padding: 0 0 0 7%;
+  }
+  .sp-textbook-conts .textbook-copy ul li {
+    margin: 8px 0;
+  }
+  .textbook-cont-ttl {
+    color: #ed1941;
+    font-size: 200%;
+    margin: 0 0 16px;
+  }
+  .textbook-cont-details {
+    margin: 16px 0 0;
+  }
+  .textbook-cont-img {
+    width: 60%;
+    float: left;
+    margin: 0 4% 0 0;
+  }
+  .textbook-cont-priceDetails {
+    width: 36%;
+    float: left;
+  }
+  .textbook-cont-price {
+    background: #ebebeb;
+    border: 1px solid #acacac;
+    text-align: center;
+    font-size: 120%;
+    padding: 4px 0;
+    margin: 16px 0;
+  }
+  .textbook-cont-icon {
+    width: 60px;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    margin: 32px auto;
+  }
+  .textbook-cont-icon a {
+    color: #fff;
+  }
+  .fa-shopping-cart {
+    width: 100%;
+    padding: 15px 0;
+    background: #f05665;
+    border-radius: 50%;
+  }
+  .fa-envelope {
+    width: 100%;
+    padding: 15px 0;
+    background: #f99d1b;
+    border-radius: 50%;
+  }
+  .textbook-details-img {
+    background: #e6e7e8;
+    padding: 16px 2.5% 8px;
+  }
+  .textbook-details-img img {
+    width: 18%;
+    margin: 0 1%;
+    float: left;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .textbook-eyecatch {
+    background-image: url("../image/textbook_eyecatch.png");
+    background-size: cover;
+    background-position: 62% 50%;
+    color: #fff;
+    padding: 100px 0 120px;
+  }
+  .textbook-pageTtl {
+    font-size: 250%;
+    font-weight: bold;
+    margin: 0 0 0 10%;
+  }
+  .textbook-desc {
+    width: 96%;
+    margin: 48px 2%;
+  }
+  .textbook-desc p {
+    margin: 0 0 12px;
+  }
+  .sp-textbook-conts {
+    display: none;
+  }
+  .textbook-conts {
+    width: 96%;
+    border: 2px solid #e1e1e1;
+    box-sizing: border-box;
+    padding: 16px 2%;
+    margin: 0 2% 48px;
+  }
+  .textbook-cont {
+    display: flex;
+  }
+  .textbook-cont-img {
+    width: 30%;
+    margin: 0 4% 0 0;
+  }
+  .textbook-cont-details {
+    width: 66%;
+    position: relative;
+  }
+  .textbook-cont-ttl {
+    color: #ed1941;
+    font-size: 200%;
+    margin: 16px 0;
+  }
+  .textbook-cont-priceDetails {
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+    width: 100%;
+  }
+  .textbook-cont-price {
+    width: 40%;
+    float: left;
+    background: #ebebeb;
+    border: 1px solid #acacac;
+    text-align: center;
+    font-size: 140%;
+    padding: 4px 0;
+    margin: 8px 10% 0 0;
+  }
+  .textbook-cont-icon {
+    width: 60px;
+    float: left;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    margin: 0 5% 0 0;
+  }
+  .textbook-cont-icon a {
+    color: #fff;
+  }
+  .fa-shopping-cart {
+    width: 100%;
+    padding: 15px 0;
+    background: #f05665;
+    border-radius: 50%;
+  }
+  .fa-envelope {
+    width: 100%;
+    padding: 15px 0;
+    background: #f99d1b;
+    border-radius: 50%;
+  }
+  .textbook-details-img {
+    background: #e6e7e8;
+    padding: 16px 10% 8px;
+  }
+  .textbook-details-img img {
+    width: 16%;
+    margin: 0 2%;
+    float: left;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .textbook-eyecatch {
+    background-image: url("../image/textbook_eyecatch.png");
+    background-size: cover;
+    background-position: 70% 50%;
+    color: #fff;
+    padding: 140px 0 180px;
+  }
+  .textbook-pageTtl {
+    font-size: 350%;
+    font-weight: bold;
+  }
+  .textbook-desc {
+    margin: 48px 0;
+  }
+  .textbook-desc p {
+    margin: 0 0 12px;
+  }
+  .sp-textbook-conts {
+    display: none;
+  }
+  .textbook-conts {
+    border: 2px solid #e1e1e1;
+    box-sizing: border-box;
+    padding: 16px 2%;
+    margin: 0 0 48px;
+  }
+  .textbook-cont {
+    display: flex;
+  }
+  .textbook-cont-img {
+    width: 30%;
+    margin: 0 4% 0 0;
+  }
+  .textbook-cont-details {
+    width: 66%;
+    position: relative;
+  }
+  .textbook-cont-ttl {
+    color: #ed1941;
+    font-size: 200%;
+    margin: 40px 0 32px;
+  }
+  .textbook-cont-priceDetails {
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    width: 100%;
+  }
+  .textbook-cont-price {
+    width: 30%;
+    float: left;
+    background: #ebebeb;
+    border: 1px solid #acacac;
+    text-align: center;
+    font-size: 160%;
+    padding: 4px 0;
+    margin: 8px 10% 0 0;
+  }
+  .textbook-cont-icon {
+    width: 60px;
+    float: left;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    margin: 0 5% 0 0;
+  }
+  .textbook-cont-icon a {
+    color: #fff;
+  }
+  .fa-shopping-cart {
+    width: 100%;
+    padding: 15px 0;
+    background: #f05665;
+    border-radius: 50%;
+  }
+  .fa-envelope {
+    width: 100%;
+    padding: 15px 0;
+    background: #f99d1b;
+    border-radius: 50%;
+  }
+  .textbook-details-img {
+    background: #e6e7e8;
+    padding: 16px 15% 8px;
+  }
+  .textbook-details-img img {
+    width: 16%;
+    margin: 0 2%;
+    float: left;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .seminar-catch {
+    background-image: url("../image/seminar_catch.png");
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 40px 0 80px;
+  }
+  .seminar-catch .seminar-pageTtl {
+    color: #ed1941;
+    font-size: 250%;
+    font-weight: bold;
+    margin: 0 0 0 5%;
+  }
+  .seminar-desc {
+    width: 96%;
+    margin: 32px 2%;
+  }
+  .seminar-desc p {
+    margin: 0 0 12px;
+  }
+  .seminar-benefit {
+    margin: 40px 0;
+  }
+  .seminar-benefit img {
+    width: 92%;
+    margin: 24px 4% 16px;
+  }
+  .seminar-benefit p {
+    width: 96%;
+    margin: 0 2% 12px;
+  }
+  .seminar-benefit ul {
+    list-style: square;
+    margin: 16px 0 0;
+  }
+  .seminar-benefit ul div {
+    background: #fee;
+  }
+  .seminar-benefit ul li {
+    margin: 0 0 0 7%;
+    padding: 8px 0;
+  }
+  .seminar-schedule .seminar-schedule-desc {
+    text-align: center;
+    font-size: 90%;
+    margin: 12px 0 8px;
+  }
+  .seminar-schedule p {
+    margin: 0 2%;
+  }
+  .seminar-schedule .seminar-schedule-table {
+    border: 1px solid #ed1941;
+    width: 96%;
+    margin: 12px 2%;
+    text-align: center;
+    padding: 8px 0;
+  }
+  .seminar-schedule .seminar-schedule-table p {
+    font-size: 90%;
+    padding: 4px 0;
+  }
+  .seminar-schedule .seminar-schedule-table p strong {
+    font-size: 120%;
+    color: #ed1941;
+    font-weight: bold;
+  }
+  .seminar-schedule .seminar-schedule-table p:nth-child(even) {
+    background: #fee;
+  }
+  .seminar-syllabus {
+    margin: 40px 0 0;
+  }
+  .seminar-syllabus p {
+    margin: 0 2%;
+  }
+  .seminar-syllabus ul {
+    list-style: disc;
+    margin: 16px 0 4px;
+  }
+  .seminar-syllabus ul div {
+    background: #fee;
+  }
+  .seminar-syllabus ul li {
+    margin: 0 0 0 10%;
+    padding: 4px 0;
+  }
+  .seminar-syllabus img {
+    width: 92%;
+    margin: 0 4%;
+  }
+  .seminar-lecturer {
+    margin: 40px 2% 0;
+  }
+  .seminar-lecturer .seminar-lecturer-teacher {
+    margin: 0 0 24px;
+  }
+  .seminar-lecturer .seminar-lecturer-teacher img {
+    width: 60%;
+    margin: 0 20%;
+    border-radius: 50%;
+  }
+  .seminar-lecturer .seminar-lecturer-teacher p {
+    text-align: center;
+    font-size: 110%;
+    font-weight: bold;
+  }
+  .seminar-fees {
+    margin: 40px 2%;
+  }
+  .seminar-fees .seminar-fees-table {
+    border: 1px solid #ed1941;
+  }
+  .seminar-fees .seminar-fees-table .seminar-fees-cont {
+    padding: 12px 0;
+  }
+  .seminar-fees .seminar-fees-table .seminar-fees-cont:nth-child(1) {
+    border-bottom: 1px solid #ed1941;
+  }
+  .seminar-fees .seminar-fees-table .seminar-fees-cont .seminar-fees-place {
+    text-align: center;
+    line-height: 1;
+  }
+  .seminar-fees .seminar-fees-table .seminar-fees-cont .seminar-fees-place p:nth-child(1) {
+    font-size: 120%;
+  }
+  .seminar-fees .seminar-fees-table .seminar-fees-cont .seminar-fees-price {
+    text-align: center;
+    font-size: 140%;
+    font-weight: bold;
+    margin: 12px 0;
+  }
+  .seminar-fees .seminar-fees-table .seminar-fees-cont .seminar-fees-note {
+    margin: 0 3%;
+  }
+  .seminar-fees .seminar-fees-list {
+    margin: 16px 0 0;
+  }
+  .seminar-fees .seminar-fees-list ul {
+    list-style: disc;
+  }
+  .seminar-fees .seminar-fees-list ul li {
+    margin: 0 0 0 7%;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .seminar-catch {
+    background-image: url("../image/seminar_catch.png");
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 40px 0 120px;
+  }
+  .seminar-catch .seminar-pageTtl {
+    color: #ed1941;
+    font-size: 250%;
+    font-weight: bold;
+    margin: 0 0 0 5%;
+  }
+  .seminar-desc {
+    width: 96%;
+    margin: 32px 2% 48px;
+  }
+  .seminar-desc p {
+    margin: 0 0 12px;
+  }
+  .seminar-benefit {
+    margin: 48px 0;
+  }
+  .seminar-benefit img {
+    width: 92%;
+    margin: 16px 4% 16px;
+  }
+  .seminar-benefit p {
+    width: 96%;
+    margin: 0 2% 12px;
+  }
+  .seminar-benefit ul {
+    list-style: square;
+    margin: 16px 0 0;
+  }
+  .seminar-benefit ul div {
+    background: #fee;
+  }
+  .seminar-benefit ul li {
+    margin: 0 0 0 7%;
+    padding: 8px 0;
+  }
+  .seminar-schedule .seminar-schedule-desc {
+    text-align: center;
+    font-size: 90%;
+    margin: 12px 0 8px;
+  }
+  .seminar-schedule p {
+    margin: 0 2%;
+  }
+  .seminar-schedule .seminar-schedule-table {
+    border: 1px solid #ed1941;
+    width: 96%;
+    margin: 12px 2%;
+    text-align: center;
+    padding: 8px 0;
+  }
+  .seminar-schedule .seminar-schedule-table p {
+    font-size: 90%;
+    padding: 4px 0;
+  }
+  .seminar-schedule .seminar-schedule-table p strong {
+    font-size: 120%;
+    color: #ed1941;
+    font-weight: bold;
+  }
+  .seminar-schedule .seminar-schedule-table p:nth-child(even) {
+    background: #fee;
+  }
+  .seminar-syllabus {
+    margin: 40px 0 0;
+  }
+  .seminar-syllabus p {
+    margin: 0 2%;
+  }
+  .seminar-syllabus ul {
+    list-style: disc;
+    margin: 16px 0 4px;
+  }
+  .seminar-syllabus ul div {
+    background: #fee;
+  }
+  .seminar-syllabus ul li {
+    margin: 0 0 0 10%;
+    padding: 4px 0;
+  }
+  .seminar-syllabus img {
+    width: 92%;
+    margin: 0 4%;
+  }
+  .seminar-lecturer {
+    margin: 40px 2% 0;
+  }
+  .seminar-lecturer .seminar-lecturer-teacher {
+    margin: 0 0 40px;
+  }
+  .seminar-lecturer .seminar-lecturer-teacher img {
+    width: 60%;
+    margin: 0 20%;
+    border-radius: 50%;
+  }
+  .seminar-lecturer .seminar-lecturer-teacher p {
+    text-align: center;
+    font-size: 110%;
+    font-weight: bold;
+  }
+  .seminar-fees {
+    margin: 40px 2%;
+  }
+  .seminar-fees .seminar-fees-table {
+    border: 1px solid #ed1941;
+  }
+  .seminar-fees .seminar-fees-table .seminar-fees-cont {
+    padding: 12px 0;
+  }
+  .seminar-fees .seminar-fees-table .seminar-fees-cont:nth-child(1) {
+    border-bottom: 1px solid #ed1941;
+  }
+  .seminar-fees .seminar-fees-table .seminar-fees-cont .seminar-fees-place {
+    text-align: center;
+    line-height: 1;
+  }
+  .seminar-fees .seminar-fees-table .seminar-fees-cont .seminar-fees-place p:nth-child(1) {
+    font-size: 120%;
+  }
+  .seminar-fees .seminar-fees-table .seminar-fees-cont .seminar-fees-price {
+    text-align: center;
+    font-size: 140%;
+    font-weight: bold;
+    margin: 12px 0;
+  }
+  .seminar-fees .seminar-fees-table .seminar-fees-cont .seminar-fees-note {
+    margin: 0 3%;
+  }
+  .seminar-fees .seminar-fees-list {
+    margin: 16px 0 0;
+  }
+  .seminar-fees .seminar-fees-list ul {
+    list-style: disc;
+  }
+  .seminar-fees .seminar-fees-list ul li {
+    margin: 0 0 0 7%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .seminar-catch {
+    background-image: url("../image/seminar_catch.png");
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 100px 0 120px;
+  }
+  .seminar-catch .seminar-pageTtl {
+    color: #ed1941;
+    font-size: 250%;
+    font-weight: bold;
+    margin: 0 0 0 10%;
+  }
+  .seminar-desc {
+    width: 96%;
+    margin: 48px 2%;
+  }
+  .seminar-desc p {
+    margin: 0 0 12px;
+  }
+  .seminar-benefit {
+    margin: 40px 0;
+  }
+  .seminar-benefit img {
+    width: 60%;
+    margin: 24px 20% 16px;
+  }
+  .seminar-benefit p {
+    width: 96%;
+    margin: 0 2% 12px;
+  }
+  .seminar-benefit ul {
+    list-style: square;
+    margin: 16px 0 0;
+  }
+  .seminar-benefit ul div {
+    background: #fee;
+  }
+  .seminar-benefit ul li {
+    margin: 0 0 0 7%;
+    padding: 8px 0;
+  }
+  .seminar-schedule .seminar-schedule-desc {
+    text-align: center;
+    font-size: 90%;
+    margin: 12px 0 8px;
+  }
+  .seminar-schedule p {
+    margin: 0 2%;
+  }
+  .seminar-schedule .seminar-schedule-table {
+    border: 1px solid #ed1941;
+    width: 96%;
+    margin: 12px 2%;
+    text-align: center;
+    padding: 8px 0;
+  }
+  .seminar-schedule .seminar-schedule-table p {
+    font-size: 90%;
+    padding: 4px 0;
+  }
+  .seminar-schedule .seminar-schedule-table p strong {
+    font-size: 120%;
+    color: #ed1941;
+    font-weight: bold;
+  }
+  .seminar-schedule .seminar-schedule-table p:nth-child(even) {
+    background: #fee;
+  }
+  .seminar-syllabus {
+    margin: 40px 0 0;
+  }
+  .seminar-syllabus p {
+    text-align: center;
+  }
+  .seminar-syllabus ul {
+    list-style: disc;
+    margin: 16px 0 4px;
+  }
+  .seminar-syllabus ul div {
+    background: #fee;
+  }
+  .seminar-syllabus ul li {
+    margin: 0 0 0 38%;
+    padding: 4px 0;
+  }
+  .seminar-syllabus img {
+    width: 50%;
+    float: left;
+  }
+  .seminar-lecturer {
+    margin: 40px 0 0;
+    padding: 0 2%;
+  }
+  .seminar-lecturer .seminar-lecturer-teacher {
+    margin: 24px 0 0;
+    width: 33.333%;
+    float: left;
+  }
+  .seminar-lecturer .seminar-lecturer-teacher img {
+    width: 60%;
+    margin: 0 20%;
+    border-radius: 50%;
+  }
+  .seminar-lecturer .seminar-lecturer-teacher p {
+    text-align: center;
+    font-size: 110%;
+    font-weight: bold;
+  }
+  .seminar-fees {
+    margin: 40px 2%;
+  }
+  .seminar-fees .seminar-fees-table {
+    border: 1px solid #ed1941;
+  }
+  .seminar-fees .seminar-fees-table .seminar-fees-cont {
+    width: 50%;
+    float: left;
+    padding: 12px 0;
+  }
+  .seminar-fees .seminar-fees-table .seminar-fees-cont:nth-child(2) {
+    border-left: 1px solid #ed1941;
+    box-sizing: border-box;
+  }
+  .seminar-fees .seminar-fees-table .seminar-fees-cont .seminar-fees-place {
+    text-align: center;
+    line-height: 1;
+  }
+  .seminar-fees .seminar-fees-table .seminar-fees-cont .seminar-fees-place p:nth-child(1) {
+    font-size: 120%;
+  }
+  .seminar-fees .seminar-fees-table .seminar-fees-cont .seminar-fees-price {
+    text-align: center;
+    font-size: 140%;
+    font-weight: bold;
+    margin: 12px 0;
+  }
+  .seminar-fees .seminar-fees-table .seminar-fees-cont .seminar-fees-note {
+    margin: 0 3%;
+  }
+  .seminar-fees .seminar-fees-list {
+    margin: 16px 0 0;
+  }
+  .seminar-fees .seminar-fees-list ul {
+    list-style: disc;
+  }
+  .seminar-fees .seminar-fees-list ul li {
+    margin: 0 0 0 5%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .seminar-catch {
+    background-image: url("../image/seminar_catch.png");
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 140px 0 180px;
+  }
+  .seminar-catch .seminar-pageTtl {
+    color: #ed1941;
+    font-size: 350%;
+    font-weight: bold;
+  }
+  .seminar-desc {
+    margin: 48px 0;
+  }
+  .seminar-desc p {
+    margin: 0 0 12px;
+  }
+  .seminar-benefit {
+    margin: 40px 0;
+  }
+  .seminar-benefit img {
+    width: 60%;
+    margin: 24px 20% 16px;
+  }
+  .seminar-benefit p {
+    width: 96%;
+    margin: 0 2% 12px;
+  }
+  .seminar-benefit ul {
+    list-style: square;
+    margin: 16px 0 0;
+  }
+  .seminar-benefit ul div {
+    background: #fee;
+  }
+  .seminar-benefit ul li {
+    margin: 0 0 0 7%;
+    padding: 8px 0;
+  }
+  .seminar-schedule .seminar-schedule-desc {
+    text-align: center;
+    font-size: 90%;
+    margin: 12px 0 8px;
+  }
+  .seminar-schedule p {
+    margin: 0 2%;
+  }
+  .seminar-schedule .seminar-schedule-table {
+    border: 1px solid #ed1941;
+    width: 96%;
+    margin: 12px 2%;
+    text-align: center;
+    padding: 8px 0;
+  }
+  .seminar-schedule .seminar-schedule-table p {
+    font-size: 90%;
+    padding: 4px 0;
+  }
+  .seminar-schedule .seminar-schedule-table p strong {
+    font-size: 120%;
+    color: #ed1941;
+    font-weight: bold;
+  }
+  .seminar-schedule .seminar-schedule-table p:nth-child(even) {
+    background: #fee;
+  }
+  .seminar-syllabus {
+    margin: 40px 0 0;
+  }
+  .seminar-syllabus p {
+    text-align: center;
+  }
+  .seminar-syllabus ul {
+    list-style: disc;
+    margin: 16px 0 4px;
+  }
+  .seminar-syllabus ul div {
+    background: #fee;
+  }
+  .seminar-syllabus ul li {
+    margin: 0 0 0 38%;
+    padding: 4px 0;
+  }
+  .seminar-syllabus img {
+    width: 50%;
+    float: left;
+  }
+  .seminar-lecturer {
+    margin: 40px 0 0;
+  }
+  .seminar-lecturer .seminar-lecturer-teacher {
+    margin: 24px 0 0;
+    width: 33.333%;
+    float: left;
+  }
+  .seminar-lecturer .seminar-lecturer-teacher img {
+    width: 60%;
+    margin: 0 20%;
+    border-radius: 50%;
+  }
+  .seminar-lecturer .seminar-lecturer-teacher p {
+    text-align: center;
+    font-size: 110%;
+    font-weight: bold;
+  }
+  .seminar-fees {
+    margin: 40px 2%;
+  }
+  .seminar-fees .seminar-fees-table {
+    border: 1px solid #ed1941;
+  }
+  .seminar-fees .seminar-fees-table .seminar-fees-cont {
+    width: 50%;
+    float: left;
+    padding: 12px 0;
+  }
+  .seminar-fees .seminar-fees-table .seminar-fees-cont:nth-child(1) {
+    border-right: 1px solid #ed1941;
+    box-sizing: border-box;
+  }
+  .seminar-fees .seminar-fees-table .seminar-fees-cont .seminar-fees-place {
+    text-align: center;
+    line-height: 1;
+  }
+  .seminar-fees .seminar-fees-table .seminar-fees-cont .seminar-fees-place p:nth-child(1) {
+    font-size: 120%;
+  }
+  .seminar-fees .seminar-fees-table .seminar-fees-cont .seminar-fees-price {
+    text-align: center;
+    font-size: 140%;
+    font-weight: bold;
+    margin: 12px 0;
+  }
+  .seminar-fees .seminar-fees-table .seminar-fees-cont .seminar-fees-note {
+    margin: 0 3%;
+  }
+  .seminar-fees .seminar-fees-list {
+    margin: 16px 0 0;
+  }
+  .seminar-fees .seminar-fees-list ul {
+    list-style: disc;
+  }
+  .seminar-fees .seminar-fees-list ul li {
+    margin: 0 0 0 14%;
+  }
+}
+
+@media screen and (min-width: 0px) {
+  .pp-catch {
+    background-image: url("../image/pp_eyecatch.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 66px 0 80px;
+    margin: 0 0 24px;
+  }
+  .pp-cont p {
+    margin: 12px 2%;
+  }
+  .pp-cont ul {
+    margin: 24px 0;
+  }
+  .pp-cont ul div {
+    background: #fee;
+  }
+  .pp-cont ul li {
+    padding: 6px 2% 12px;
+  }
+  .pp-cont ul li p {
+    font-weight: bold;
+  }
+  .pp-cont ul li ul li {
+    padding: 12px 2% 0 5%;
+    line-height: 1.1em;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .pp-catch {
+    padding: 128px 0 80px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .pp-catch {
+    padding: 140px 0 120px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .pp-catch {
+    padding: 236px 0 180px;
+  }
+}
+
+@media screen and (min-width: 0px) {
+  .faq-catch {
+    background-image: url("../image/faq_catch.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 40px 0 80px;
+  }
+  .faq-catch .faq-pageTtl {
+    color: #ed1941;
+    font-size: 250%;
+    font-weight: bold;
+    margin: 0 0 0 5%;
+  }
+  .faq-cont {
+    margin: 0 0 40px;
+  }
+  .faq-cont .faq-cont-details {
+    margin: 0 0 12px;
+  }
+  .faq-cont .faq-cont-details .questions {
+    background: #fee;
+    padding: 8px 2%;
+  }
+  .faq-cont .faq-cont-details .questions .more-icon {
+    text-align: center;
+    font-size: 80%;
+    margin: 8px 0 0;
+    color: #ed1941;
+    font-weight: bold;
+  }
+  .faq-cont .faq-cont-details .answers {
+    padding: 8px 2%;
+    display: none;
+  }
+  .faq-cont .faq-cont-details .q, .faq-cont .faq-cont-details .a {
+    font-weight: bold;
+    float: left;
+    margin: 0 5% 0 0;
+    width: 5%;
+  }
+  .faq-cont .faq-cont-details .question, .faq-cont .faq-cont-details .answer {
+    width: 90%;
+    float: left;
+  }
+  .faq-cont .faq-cont-details .question a, .faq-cont .faq-cont-details .answer a {
+    color: #000;
+  }
+  .faq-cont .faq-cont-details .question a:hover, .faq-cont .faq-cont-details .answer a:hover {
+    text-decoration: underline;
+  }
+  .faq-cont p {
+    text-align: center;
+  }
+  .faq-cont p a {
+    color: #ed1941;
+    font-weight: bold;
+  }
+  .faq-inquiry {
+    width: 80%;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 12px 0;
+    color: #fff;
+    background: #ed1941;
+    border-radius: 30px;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .faq-catch {
+    padding: 40px 0 120px;
+  }
+  .faq-cont {
+    margin: 0 0 60px;
+  }
+  .faq-cont .questions:hover {
+    cursor: pointer;
+  }
+  .faq-cont p a:hover {
+    text-decoration: underline;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .faq-catch {
+    padding: 100px 0 120px;
+  }
+  .faq-cont {
+    margin: 40px 0 60px;
+  }
+  .faq-cont .faq-cont-details {
+    margin: 12px 0;
+  }
+  .faq-cont .faq-cont-details .questions {
+    padding: 8px 12%;
+  }
+  .faq-cont .faq-cont-details .answers {
+    padding: 8px 12%;
+  }
+  .faq-cont .faq-cont-details .q, .faq-cont .faq-cont-details .a {
+    margin: inherit;
+  }
+  .faq-cont .faq-cont-details .question, .faq-cont .faq-cont-details .answer {
+    width: 95%;
+  }
+  .faq-inquiry {
+    width: 50%;
+    padding: 16px 0;
+    border-radius: 40px;
+    border-bottom: 4px solid #ad0101;
+  }
+  .faq-inquiry:hover {
+    border-bottom: 2px solid #ad0101;
+    margin: 2px 0 0;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .faq-catch {
+    padding: 140px 0 180px;
+  }
+  .faq-catch .faq-pageTtl {
+    font-size: 350%;
+    margin: inherit;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .class-catch {
+    background-image: url("../image/class_catch.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 40px 0;
+  }
+  .class-catch .class-pageTtl {
+    color: #ed1941;
+    font-size: 250%;
+    font-weight: bold;
+    margin: 0 0 0 5%;
+    line-height: 1em;
+  }
+  .class-desc {
+    width: 96%;
+    margin: 32px 2%;
+  }
+  .class-desc p {
+    margin: 0 0 12px;
+  }
+  .class-benefit {
+    margin: 40px 0;
+  }
+  .class-benefit ul {
+    list-style: disc;
+    margin: 16px 0 0;
+  }
+  .class-benefit ul div {
+    background: #fee;
+  }
+  .class-benefit ul li {
+    margin: 0 2% 0 7%;
+    padding: 8px 0;
+  }
+  .class-syllabus {
+    margin: 40px 0;
+  }
+  .class-syllabus p {
+    font-size: 90%;
+    margin: 16px 2% 0;
+  }
+  .class-syllabus ul {
+    list-style: decimal;
+  }
+  .class-syllabus ul div {
+    background: #eee;
+  }
+  .class-syllabus ul li {
+    margin: 0 0 0 9%;
+    padding: 8px 0;
+  }
+  .class-schedule {
+    margin: 40px 0;
+  }
+  .class-schedule img {
+    margin: 16px 0;
+  }
+  .class-schedule p {
+    text-align: center;
+  }
+  .class-schedule table {
+    width: 98%;
+    margin: 16px 1%;
+    border: 1px solid #ed1941;
+  }
+  .class-schedule table tr {
+    border-bottom: 1px solid #ed1941;
+  }
+  .class-schedule table tr:last-child {
+    border-bottom: none;
+  }
+  .class-schedule table tr th {
+    padding: 8px 2%;
+    text-align: center;
+    border-right: 1px solid #ed1941;
+    background: #fee;
+  }
+  .class-schedule table tr td {
+    padding: 8px 2%;
+  }
+  .class-lecturer p {
+    margin: 0 2%;
+  }
+  .class-lecturer .class-lecturer-table {
+    margin: 12px 0 24px;
+    padding: 0 0 12px;
+    border-bottom: 1px solid #fee;
+  }
+  .class-lecturer .class-lecturer-table p {
+    font-weight: bold;
+  }
+  .class-lecturer .class-lecturer-table table {
+    width: 96%;
+    margin: 8px 2%;
+    border: 1px solid #ed1941;
+  }
+  .class-lecturer .class-lecturer-table table tr:nth-child(even) {
+    background: #fee;
+  }
+  .class-lecturer .class-lecturer-table table tr th {
+    border-right: 1px solid #ed1941;
+    padding: 8px 2%;
+    text-align: center;
+  }
+  .class-lecturer .class-lecturer-table table tr td {
+    padding: 8px 2%;
+  }
+  .class-lecturer .class-lecturer-table .class-lecturer-venue p:nth-child(odd) {
+    font-weight: normal;
+  }
+  .class-fees {
+    margin: 0 2% 40px;
+  }
+  .class-fees table {
+    border: 1px solid #ed1941;
+  }
+  .class-fees table tr {
+    text-align: center;
+  }
+  .class-fees table tr th {
+    background: #fee;
+    padding: 8px 2%;
+    border-right: 1px solid #ed1941;
+    text-align: center;
+    font-weight: bold;
+  }
+  .class-fees table tr td {
+    padding: 8px 2%;
+    border-right: 1px solid #ed1941;
+    border-top: 1px solid #ed1941;
+  }
+  .venue-radio .wpcf7-list-item {
+    display: block;
+    margin: 6px 0 12px 2%;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .class-catch {
+    background-image: url("../image/class_catch.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 40px 0 60px;
+  }
+  .class-catch .class-pageTtl {
+    color: #ed1941;
+    font-size: 250%;
+    font-weight: bold;
+    margin: 0 0 0 5%;
+    line-height: 1em;
+  }
+  .class-desc {
+    width: 96%;
+    margin: 32px 2%;
+  }
+  .class-desc p {
+    margin: 0 0 12px;
+  }
+  .class-benefit {
+    margin: 40px 0;
+  }
+  .class-benefit ul {
+    list-style: disc;
+    margin: 16px 0 0;
+  }
+  .class-benefit ul div {
+    background: #fee;
+  }
+  .class-benefit ul li {
+    margin: 0 2% 0 7%;
+    padding: 8px 0;
+  }
+  .class-syllabus {
+    margin: 40px 0;
+  }
+  .class-syllabus p {
+    font-size: 90%;
+    margin: 16px 2% 0;
+  }
+  .class-syllabus ul {
+    list-style: decimal;
+  }
+  .class-syllabus ul div {
+    background: #eee;
+  }
+  .class-syllabus ul li {
+    margin: 0 2% 0 9%;
+    padding: 8px 0;
+  }
+  .class-schedule {
+    margin: 40px 0;
+  }
+  .class-schedule img {
+    margin: 16px 0;
+  }
+  .class-schedule p {
+    text-align: center;
+  }
+  .class-schedule table {
+    width: 98%;
+    margin: 16px 1%;
+    border: 1px solid #ed1941;
+  }
+  .class-schedule table tr {
+    border-bottom: 1px solid #ed1941;
+  }
+  .class-schedule table tr:last-child {
+    border-bottom: none;
+  }
+  .class-schedule table tr th {
+    padding: 8px 2%;
+    text-align: center;
+    border-right: 1px solid #ed1941;
+    background: #fee;
+  }
+  .class-schedule table tr td {
+    padding: 8px 2%;
+  }
+  .class-lecturer p {
+    margin: 0 2%;
+  }
+  .class-lecturer .class-lecturer-table {
+    margin: 12px 0 24px;
+    padding: 0 0 12px;
+    border-bottom: 1px solid #fee;
+  }
+  .class-lecturer .class-lecturer-table p {
+    font-weight: bold;
+  }
+  .class-lecturer .class-lecturer-table table {
+    width: 96%;
+    margin: 8px 2%;
+    border: 1px solid #ed1941;
+  }
+  .class-lecturer .class-lecturer-table table tr:nth-child(even) {
+    background: #fee;
+  }
+  .class-lecturer .class-lecturer-table table tr th {
+    border-right: 1px solid #ed1941;
+    padding: 8px 2%;
+    text-align: center;
+  }
+  .class-lecturer .class-lecturer-table table tr td {
+    padding: 8px 2%;
+  }
+  .class-lecturer .class-lecturer-table .class-lecturer-venue p:nth-child(odd) {
+    font-weight: normal;
+  }
+  .class-fees {
+    margin: 0 2% 40px;
+  }
+  .class-fees table {
+    border: 1px solid #ed1941;
+  }
+  .class-fees table tr {
+    text-align: center;
+  }
+  .class-fees table tr th {
+    background: #fee;
+    padding: 8px 2%;
+    border-right: 1px solid #ed1941;
+    text-align: center;
+    font-weight: bold;
+  }
+  .class-fees table tr td {
+    padding: 8px 2%;
+    border-right: 1px solid #ed1941;
+    border-top: 1px solid #ed1941;
+  }
+  .venue-radio .wpcf7-list-item {
+    display: block;
+    margin: 6px 0 12px 2%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .class-catch {
+    background-image: url("../image/class_catch.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 100px 0 120px;
+  }
+  .class-catch .class-pageTtl {
+    color: #ed1941;
+    font-size: 250%;
+    font-weight: bold;
+    margin: 0 0 0 10%;
+  }
+  .class-desc {
+    width: 96%;
+    margin: 48px 2%;
+  }
+  .class-desc p {
+    margin: 0 0 12px;
+  }
+  .class-benefit {
+    margin: 40px 0;
+  }
+  .class-benefit ul {
+    list-style: disc;
+    margin: 32px 0 0;
+  }
+  .class-benefit ul div {
+    background: #fee;
+  }
+  .class-benefit ul li {
+    margin: 0 7%;
+    padding: 8px 0;
+  }
+  .class-syllabus {
+    margin: 48px 0;
+  }
+  .class-syllabus p {
+    font-size: 90%;
+    margin: 16px 5% 0;
+  }
+  .class-syllabus ul {
+    list-style: decimal;
+  }
+  .class-syllabus ul div {
+    background: #eee;
+  }
+  .class-syllabus ul li {
+    margin: 0 7%;
+    padding: 8px 0;
+  }
+  .class-schedule {
+    margin: 48px 0;
+  }
+  .class-schedule img {
+    width: 60%;
+    margin: 16px 20%;
+  }
+  .class-schedule p {
+    text-align: center;
+  }
+  .class-schedule table {
+    width: 60%;
+    margin: 16px 20%;
+    border: 1px solid #ed1941;
+  }
+  .class-schedule table tr {
+    border-bottom: 1px solid #ed1941;
+  }
+  .class-schedule table tr:last-child {
+    border-bottom: none;
+  }
+  .class-schedule table tr th {
+    padding: 8px 2%;
+    text-align: center;
+    border-right: 1px solid #ed1941;
+    background: #fee;
+  }
+  .class-schedule table tr td {
+    padding: 8px 3%;
+  }
+  .class-lecturer {
+    width: 80%;
+    margin: 0 10%;
+  }
+  .class-lecturer p {
+    margin: 0 2% 16px;
+  }
+  .class-lecturer .class-lecturer-table {
+    margin: 12px 0 24px;
+    padding: 0 0 12px;
+    border-bottom: 1px solid #ed1941;
+  }
+  .class-lecturer .class-lecturer-table p {
+    font-weight: bold;
+  }
+  .class-lecturer .class-lecturer-table table {
+    width: 70%;
+    margin: 8px 15%;
+    border: 1px solid #ed1941;
+  }
+  .class-lecturer .class-lecturer-table table tr:nth-child(even) {
+    background: #fee;
+  }
+  .class-lecturer .class-lecturer-table table tr th {
+    border-right: 1px solid #ed1941;
+    padding: 8px 2%;
+    text-align: center;
+  }
+  .class-lecturer .class-lecturer-table table tr td {
+    padding: 8px 5%;
+  }
+  .class-lecturer .class-lecturer-table .class-lecturer-venue p:nth-child(odd) {
+    font-weight: normal;
+  }
+  .class-fees {
+    width: 70%;
+    margin: 0 15% 40px;
+  }
+  .class-fees table {
+    width: 100%;
+    border: 1px solid #ed1941;
+  }
+  .class-fees table tr {
+    text-align: center;
+  }
+  .class-fees table tr th {
+    background: #fee;
+    padding: 8px 2%;
+    border-right: 1px solid #ed1941;
+    text-align: center;
+    font-weight: bold;
+  }
+  .class-fees table tr td {
+    padding: 8px 2%;
+    border-right: 1px solid #ed1941;
+    border-top: 1px solid #ed1941;
+  }
+  .venue-radio .wpcf7-list-item {
+    display: block;
+    margin: 6px 0 12px 2%;
+  }
+  .inquiry-venue {
+    width: 60%;
+    float: left;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .class-catch {
+    background-image: url("../image/class_catch.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 140px 0 180px;
+  }
+  .class-catch .class-pageTtl {
+    color: #ed1941;
+    font-size: 350%;
+    font-weight: bold;
+  }
+  .class-desc {
+    margin: 48px 0;
+  }
+  .class-desc p {
+    margin: 0 0 12px;
+  }
+  .class-benefit {
+    margin: 40px 0;
+  }
+  .class-benefit ul {
+    list-style: disc;
+    margin: 32px 0 0;
+  }
+  .class-benefit ul div {
+    background: #fee;
+  }
+  .class-benefit ul li {
+    margin: 0 15%;
+    padding: 8px 0;
+  }
+  .class-syllabus {
+    margin: 48px 0;
+  }
+  .class-syllabus p {
+    font-size: 90%;
+    margin: 16px 2% 0;
+  }
+  .class-syllabus ul {
+    list-style: decimal;
+  }
+  .class-syllabus ul div {
+    background: #eee;
+  }
+  .class-syllabus ul li {
+    margin: 0 15%;
+    padding: 8px 0;
+  }
+  .class-schedule {
+    margin: 48px 0;
+  }
+  .class-schedule img {
+    width: 60%;
+    margin: 16px 20%;
+  }
+  .class-schedule p {
+    text-align: center;
+  }
+  .class-schedule table {
+    width: 60%;
+    margin: 16px 20%;
+    border: 1px solid #ed1941;
+  }
+  .class-schedule table tr {
+    border-bottom: 1px solid #ed1941;
+  }
+  .class-schedule table tr:last-child {
+    border-bottom: none;
+  }
+  .class-schedule table tr th {
+    padding: 8px 2%;
+    text-align: center;
+    border-right: 1px solid #ed1941;
+    background: #fee;
+  }
+  .class-schedule table tr td {
+    padding: 8px 2%;
+  }
+  .class-lecturer {
+    width: 80%;
+    margin: 0 10%;
+  }
+  .class-lecturer p {
+    margin: 0 2%;
+  }
+  .class-lecturer .class-lecturer-table {
+    margin: 12px 0 24px;
+    padding: 0 0 12px;
+    border-bottom: 1px solid #ed1941;
+  }
+  .class-lecturer .class-lecturer-table p {
+    font-weight: bold;
+  }
+  .class-lecturer .class-lecturer-table table {
+    width: 70%;
+    margin: 8px 15%;
+    border: 1px solid #ed1941;
+  }
+  .class-lecturer .class-lecturer-table table tr:nth-child(even) {
+    background: #fee;
+  }
+  .class-lecturer .class-lecturer-table table tr th {
+    border-right: 1px solid #ed1941;
+    padding: 8px 2%;
+    text-align: center;
+  }
+  .class-lecturer .class-lecturer-table table tr td {
+    padding: 8px 5%;
+  }
+  .class-lecturer .class-lecturer-table .class-lecturer-venue p:nth-child(odd) {
+    font-weight: normal;
+  }
+  .class-fees {
+    width: 60%;
+    margin: 0 20% 40px;
+  }
+  .class-fees table {
+    width: 100%;
+    border: 1px solid #ed1941;
+  }
+  .class-fees table tr {
+    text-align: center;
+  }
+  .class-fees table tr th {
+    background: #fee;
+    padding: 8px 2%;
+    border-right: 1px solid #ed1941;
+    text-align: center;
+    font-weight: bold;
+  }
+  .class-fees table tr td {
+    padding: 8px 2%;
+    border-right: 1px solid #ed1941;
+    border-top: 1px solid #ed1941;
+  }
+}
+
+@media screen and (min-width: 0px) {
+  .about-catch {
+    background-image: url("../image/about_catch.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 40px 0 80px;
+  }
+  .about-catch .about-pageTtl {
+    color: #ed1941;
+    font-size: 250%;
+    font-weight: bold;
+    margin: 0 0 0 5%;
+  }
+  .about-desc {
+    width: 96%;
+    margin: 32px 2%;
+  }
+  .about-desc p {
+    margin: 0 0 12px;
+  }
+  .about-benefit {
+    margin: 40px 0;
+  }
+  .about-benefit ul {
+    list-style: square;
+    margin: 16px 0 0;
+  }
+  .about-benefit ul div {
+    background: #fee;
+  }
+  .about-benefit ul li {
+    margin: 0 2% 0 7%;
+    padding: 8px 0;
+  }
+  .about-association {
+    width: 96%;
+    margin: 40px 2%;
+  }
+  .about-association img {
+    margin: 8px 0 16px;
+  }
+  .about-association p {
+    margin: 0 0 12px;
+  }
+  .about-outline {
+    margin: 40px 0;
+  }
+  .about-outline .about-outline-cont {
+    margin: 8px 0;
+    padding: 8px 2%;
+  }
+  .about-outline .about-outline-cont:nth-child(even) {
+    background: #fee;
+  }
+  .about-outline .about-outline-cont h5 {
+    font-weight: bold;
+    font-size: 110%;
+  }
+  .about-level {
+    margin: 40px 0 0;
+  }
+  .about-level table {
+    width: 98%;
+    margin: 0 1%;
+    border: 1px solid #ed1941;
+  }
+  .about-level table tr {
+    border-bottom: 1px solid #ed1941;
+  }
+  .about-level table tr th {
+    padding: 8px 2%;
+    text-align: center;
+    background: #fee;
+  }
+  .about-level table tr td {
+    padding: 8px 2%;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .about-catch {
+    padding: 40px 0 120px;
+  }
+  .about-benefit {
+    margin: 48px 0;
+  }
+  .about-association img {
+    width: 92%;
+    margin: 16px 4%;
+  }
+  .about-outline .about-outline-cont {
+    padding: 8px 10%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .about-catch {
+    padding: 100px 0 120px;
+  }
+  .about-catch .about-catchTtl {
+    margin: 0 0 0 10%;
+  }
+  .about-desc {
+    margin: 48px 2%;
+  }
+  .about-association img {
+    width: 60%;
+    margin: 24px 20% 16px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .about-catch {
+    padding: 140px 0 180px;
+  }
+  .about-catch .about-pageTtl {
+    font-size: 350%;
+    margin: 0;
+  }
+  .about-desc {
+    width: inherit;
+    margin: 48px 0;
+  }
+  .about-association {
+    width: 100%;
+    margin: 40px 0;
+  }
+  .about-association img {
+    width: 60%;
+    margin: 24px 20% 16px;
+  }
+  .about-outline .about-outline-cont {
+    padding: 8px 15%;
+  }
+}
+
+@media screen and (min-width: 0px) {
+  .aboutus-catch {
+    background-image: url("../image/aboutus_catch.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 40px 0 80px;
+  }
+  .aboutus-catch .aboutus-pageTtl {
+    color: #ed1941;
+    font-size: 250%;
+    font-weight: bold;
+    margin: 0 0 0 5%;
+  }
+  .aboutus-conts img {
+    display: none;
+  }
+  .aboutus-cont p {
+    text-align: center;
+    margin: 24px 0;
+    font-size: 120%;
+  }
+  .aboutus-cont ul {
+    text-align: center;
+  }
+  .aboutus-cont ul li {
+    padding: 8px 2%;
+  }
+  .aboutus-cont ul li:nth-child(odd) {
+    background: #fee;
+  }
+  .aboutus-cont ul li strong {
+    font-size: 120%;
+    font-weight: bold;
+  }
+  .ggmap {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+  }
+  .ggmap iframe,
+  .ggmap object,
+  .ggmap embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .aboutus-catch {
+    padding: 40px 0 120px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .aboutus-catch {
+    padding: 100px 0 120px;
+  }
+  .aboutus-conts img {
+    display: block;
+    width: 60%;
+    margin: 24px 20% 0;
+  }
+  .ggmap {
+    width: 80%;
+    margin: 24px 10% 0;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .aboutus-catch {
+    padding: 140px 0 180px;
+  }
+  .aboutus-catch .aboutus-pageTtl {
+    font-size: 350%;
+    margin: inherit;
+  }
+}
+
+@media screen and (min-width: 0px) {
+  .contact-catch {
+    background-image: url("../image/inquiry_catch.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 40px 0;
+  }
+  .contact-catch .contact-pageTtl {
+    color: #ed1941;
+    font-size: 250%;
+    font-weight: bold;
+    margin: 0 0 0 5%;
+    line-height: 1em;
+  }
+  .contact-catch .contact-pageTtl p {
+    font-size: 50%;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .contact-catch {
+    padding: 40px 0 60px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .contact-catch {
+    padding: 80px 0 90px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .contact-catch {
+    padding: 100px 0 130px;
+  }
+  .contact-catch .contact-pageTtl {
+    font-size: 350%;
+    margin: inherit;
+  }
+}
+
+.mistakes-cont p {
+  text-align: center;
+}
+
+.mistakes-cont table {
+  border: 1px solid #ed1941;
+  margin-top: 32px;
+  font-size: 80%;
+}
+
+.mistakes-cont table tr:nth-child(even) {
+  background: #fef;
+}
+
+.mistakes-cont table tr th {
+  text-align: center;
+  background: #fee;
+  border-bottom: 1px solid #ed1941;
+  border-right: 1px solid #ed1941;
+  padding: 8px 1%;
+}
+
+.mistakes-cont table tr th:first-child {
+  width: 11%;
+}
+
+.mistakes-cont table tr th:nth-child(2) {
+  width: 20%;
+}
+
+.mistakes-cont table tr td {
+  text-align: center;
+  border-right: 1px solid #ed1941;
+  padding: 8px 1%;
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 481px) {
+  .mistakes-cont {
+    width: 98%;
+    margin: 0 1%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .mistakes-cont {
+    width: 90%;
+    margin: 0 5%;
+  }
+  .mistakes-cont table tr th:first-child {
+    width: 6%;
+  }
+  .mistakes-cont table tr th:nth-child(3) {
+    width: 37%;
+  }
+  .mistakes-cont table tr td {
+    padding: 8px 0;
+  }
+}
+
+@media screen and (min-width: 0px) {
+  .entry-desc {
+    width: 96%;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  .entry-form {
+    width: 90%;
+    margin: 24px 5% 0;
+  }
+  .entry-form .wpcf7-list-item {
+    display: block;
+    font-size: 90%;
+    margin: 8px 0;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .entry-p {
+    display: flex;
+  }
+  .entry-p .wpcf7-list-item {
+    font-size: 100%;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .entry-form {
+    width: 60%;
+    margin: 24px 20% 0;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .thai--visual__btn {
+    width: 80%;
+    margin: 24px auto 0;
+    background: #ed1941;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+  }
+  .thai--about__wrap {
+    padding: 60px 0;
+  }
+  .thai--about__ttl {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .thai--about__cont {
+    width: 94%;
+    margin: 24px auto;
+  }
+  .thai--about__cont p {
+    margin-bottom: 18px;
+  }
+  .thai--about__btn {
+    width: 80%;
+    margin: 24px auto 0;
+    background: #ed1941;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+  }
+  .thai--merit {
+    background-image: url("../image/thai_merit.jpg");
+    background-size: cover;
+    background-position: 0 100%;
+    padding: 60px 0 80px;
+  }
+  .thai--merit__ttl {
+    font-size: 36px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .thai--merit__cont {
+    background: #fff;
+    width: 92%;
+    margin: 0 2% 24px;
+    padding: 12px 2%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .thai--merit__cont-style {
+    width: 8%;
+  }
+  .thai--merit__cont-text {
+    width: 92%;
+  }
+  .thai--wrap {
+    background-image: url("../image/thai_wrap_bg.png");
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  .thai--exam {
+    padding: 60px 0 80px;
+  }
+  .thai--exam__ttl {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.1;
+  }
+  .thai--exam__subttl {
+    font-size: 20px;
+    text-align: center;
+    margin: 24px 0 16px;
+  }
+  .thai--exam__table {
+    width: 94%;
+    margin: 0 auto;
+  }
+  .thai--exam__table table {
+    border: 1px solid #ed1941;
+    padding: 4px;
+    display: block;
+  }
+  .thai--exam__table table tr th {
+    width: 20%;
+    text-align: center;
+    background: #feecee;
+    color: #ed1941;
+    border-bottom: 2px solid #fff;
+  }
+  .thai--exam__table table tr td {
+    width: 75%;
+    border-bottom: 2px solid #feecee;
+    padding: 8px 0 8px 4%;
+  }
+  .thai--exam__btn {
+    width: 80%;
+    margin: 24px auto 0;
+    background: #ed1941;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+  }
+  .thai--level {
+    padding: 60px 0 80px;
+  }
+  .thai--level__table {
+    width: 96%;
+    margin: 24px 2% 0;
+  }
+  .thai--level__table table {
+    width: 98%;
+    border: 1px solid #ed1941;
+    padding: 4px 1%;
+    display: block;
+    font-size: 18px;
+  }
+  .thai--level__table table tbody {
+    border: 1px solid #ed1941;
+  }
+  .thai--level__table table td {
+    padding: 6px 0;
+    border: 1px solid #ed1941;
+  }
+  .thai--level__table-1st, .thai--level__table-2nd {
+    text-align: center;
+    display: table-cell;
+    line-height: 1.5;
+    width: 8%;
+  }
+  .thai--level__table-3rd {
+    padding: 5px 2%;
+  }
+  .thai--text {
+    padding: 60px 0 80px;
+  }
+  .thai--text__wrap {
+    width: 94%;
+    margin: 0 auto;
+  }
+  .thai--text__img {
+    display: none;
+  }
+  .thai--text__cont-ttl {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .thai--text__cont-img {
+    width: 70%;
+    max-width: 300px;
+    margin: 20px auto 12px;
+  }
+  .thai--text__cont-table table {
+    width: 98%;
+    max-width: 630px;
+    margin: 0 auto;
+    border: 1px solid #ed1941;
+    padding: 4px;
+    display: block;
+  }
+  .thai--text__cont-table table tr {
+    width: 100%;
+  }
+  .thai--text__cont-table table th {
+    background: #feecee;
+    color: #ed1941;
+    text-align: center;
+    padding: 4px 0;
+  }
+  .thai--text__cont-table table td {
+    text-align: center;
+    border: 1px solid #feecee;
+    padding: 4px 0;
+  }
+  .thai--text__cont-table__1st {
+    width: 30%;
+  }
+  .thai--text__cont-table__2nd {
+    width: 50%;
+  }
+  .thai--text__cont-table__3rd {
+    width: 30%;
+  }
+  .thai--text__cont-btn {
+    width: 80%;
+    margin: 24px auto 0;
+    background: #ed1941;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+  }
+  .thai--faq {
+    padding: 80px 0 60px;
+    background-image: url("../image/thai_faq_bg.jpg");
+    background-size: cover;
+    background-position: 50% 0;
+  }
+  .thai--faq__ttl {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .thai--faq__subttl {
+    width: 96%;
+    margin: 12px auto;
+    background: #feecee;
+    padding: 12px 0;
+    font-size: 24px;
+    text-align: center;
+  }
+  .thai--faq__wrap {
+    width: 96%;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #feecee;
+    border-bottom: 8px solid #feecee;
+  }
+  .thai--faq__wrap-cont {
+    padding: 16px 0 16px 5%;
+    border-bottom: 2px solid #feecee;
+  }
+  .thai--faq__wrap-q {
+    color: #ed1941;
+    margin-bottom: 12px;
+  }
+  .thai--contact {
+    background: #e1e1e1;
+    padding: 40px 0;
+  }
+  .thai--contact__wrap {
+    background: #fff;
+    width: 94%;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+  .thai--contact__ttl {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .thai--contact__form {
+    width: 94%;
+    margin: 16px auto;
+  }
+  .thai--contact__form .wpcf7-list-item {
+    display: block;
+    margin-bottom: 4px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .thai--visual {
+    position: relative;
+  }
+  .thai--visual__btn {
+    position: absolute;
+    bottom: 62px;
+    left: 11%;
+    background: #ed1941;
+    color: #fff;
+    padding: 8px 50px;
+  }
+  .thai--about {
+    background-image: url("../image/thai_about.png");
+    background-size: cover;
+    background-position: 0% 50%;
+  }
+  .thai--about__wrap {
+    width: 55%;
+    max-width: 680px;
+    margin: 0 5% 0 auto;
+    padding: 80px 0;
+  }
+  .thai--about__ttl {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  .thai--about__cont {
+    margin: 24px 0;
+    line-height: 1.5;
+  }
+  .thai--about__cont p {
+    margin-bottom: 18px;
+  }
+  .thai--about__btn {
+    width: 260px;
+    background: #ed1941;
+    color: #fff;
+    padding: 8px 0;
+    text-align: center;
+    display: inline-block;
+  }
+  .thai--merit {
+    background-image: url("../image/thai_merit.jpg");
+    background-size: cover;
+    background-position: 50% 100%;
+    padding: 160px 0 80px;
+  }
+  .thai--merit__ttl {
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .thai--merit__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 960px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .thai--merit__cont {
+    background: #fff;
+    width: 260px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .thai--merit__cont-m {
+    margin: 0 30px;
+  }
+  .thai--merit__cont-style {
+    width: 30px;
+  }
+  .thai--merit__cont-text {
+    width: 230px;
+  }
+  .thai--wrap {
+    background-image: url("../image/thai_wrap_bg.png");
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  .thai--exam {
+    padding: 80px 0;
+  }
+  .thai--exam__ttl {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .thai--exam__subttl {
+    font-size: 28px;
+    text-align: center;
+    margin: 24px 0 16px;
+  }
+  .thai--exam__table {
+    width: 900px;
+    margin: 0 auto;
+  }
+  .thai--exam__table table {
+    width: 890px;
+    border: 1px solid #ed1941;
+    padding: 4px;
+    display: block;
+  }
+  .thai--exam__table table tr th {
+    width: 200px;
+    text-align: center;
+    padding: 6px 0;
+    background: #feecee;
+    color: #ed1941;
+    border-bottom: 2px solid #fff;
+  }
+  .thai--exam__table table tr td {
+    width: 620px;
+    border-bottom: 2px solid #feecee;
+    padding-left: 80px;
+  }
+  .thai--exam__btn {
+    width: 260px;
+    background: #ed1941;
+    color: #fff;
+    padding: 8px;
+    text-align: center;
+    margin: 40px auto 0;
+    display: inline-block;
+  }
+  .thai--level {
+    padding: 80px 0;
+  }
+  .thai--level__table {
+    width: 900px;
+    margin: 40px auto 0;
+  }
+  .thai--level__table table {
+    width: 890px;
+    border: 1px solid #ed1941;
+    padding: 4px;
+    display: block;
+    font-size: 16px;
+  }
+  .thai--level__table table tbody {
+    border: 1px solid #feecee;
+  }
+  .thai--level__table table td {
+    padding: 6px 0;
+    border: 1px solid #feecee;
+  }
+  .thai--level__table-1st {
+    width: 100px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .thai--level__table-2nd {
+    width: 180px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .thai--level__table-3rd {
+    width: 610px;
+    padding: 6px 40px !important;
+  }
+  .thai--text {
+    padding: 80px 0;
+  }
+  .thai--text__wrap {
+    width: 880px;
+    margin: 0 auto;
+    display: table;
+  }
+  .thai--text__img {
+    width: 300px;
+  }
+  .thai--text__cont {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .thai--text__cont-ttl {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .thai--text__cont-table {
+    width: 440px;
+    margin: 32px auto;
+  }
+  .thai--text__cont-table table {
+    width: 430px;
+    border: 1px solid #ed1941;
+    padding: 4px;
+    display: block;
+  }
+  .thai--text__cont-table table tr {
+    width: 430px;
+  }
+  .thai--text__cont-table table th {
+    background: #feecee;
+    color: #ed1941;
+    text-align: center;
+    padding: 4px 0;
+  }
+  .thai--text__cont-table table td {
+    text-align: center;
+    border: 1px solid #feecee;
+    padding: 4px 0;
+  }
+  .thai--text__cont-table__1st, .thai--text__cont-table__3rd {
+    width: 140px;
+  }
+  .thai--text__cont-table__2nd {
+    width: 150px;
+  }
+  .thai--text__cont-btn {
+    width: 440px;
+    margin: 0 auto;
+    background: #ed1941;
+    color: #fff;
+    padding: 8px 0;
+    text-align: center;
+    display: inline-block;
+  }
+  .thai--faq {
+    padding: 100px 0 120px;
+    margin-top: 40px;
+    background-image: url("../image/thai_faq_bg.jpg");
+    background-size: cover;
+    background-position: 50% 0;
+  }
+  .thai--faq__ttl {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .thai--faq__subttl {
+    width: 880px;
+    margin: 40px auto 0;
+    background: #feecee;
+    padding: 12px 0 12px 80px;
+    font-size: 24px;
+  }
+  .thai--faq__wrap {
+    width: 960px;
+    margin: 12px auto 0;
+    background: #fff;
+    border: 1px solid #feecee;
+    border-bottom: 8px solid #feecee;
+  }
+  .thai--faq__wrap-cont {
+    padding: 16px 0 16px 60px;
+    border-bottom: 2px solid #feecee;
+  }
+  .thai--faq__wrap-q {
+    color: #ed1941;
+  }
+  .thai--contact {
+    background: #e1e1e1;
+    padding: 80px 0;
+  }
+  .thai--contact__wrap {
+    background: #fff;
+    width: 960px;
+    margin: 0 auto;
+    padding: 60px 0;
+  }
+  .thai--contact__ttl {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .thai--contact__form {
+    width: 580px;
+    margin: 24px auto;
+  }
+  .thai--contact__form .wpcf7-list-item {
+    display: block;
+  }
+  .thai--contact .wpcf7-form-control-wrap {
+    margin: 0 auto;
+  }
+  .thai--contact .wpcf7-form-control-wrap a {
+    color: #000;
+    text-decoration: underline;
+  }
+  .thai--contact .inquiry-p p {
+    width: 380px;
+  }
+  .thai--contact .inquiry-p p input[type="text"],
+  .thai--contact .inquiry-p p input[type="tel"],
+  .thai--contact .inquiry-p p input[type="email"],
+  .thai--contact .inquiry-p p textarea {
+    width: 380px;
+  }
+  .thai--inquiry-ttl {
+    width: 200px;
+  }
+}

@@ -1,0 +1,615 @@
+// main: ../default.scss
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .class-catch {
+    background-image: url('../image/class_catch.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 40px 0;
+    .class-pageTtl {
+      color: #ed1941;
+      font-size: 250%;
+      font-weight: bold;
+      margin: 0 0 0 5%;
+      line-height: 1em;
+    }
+  }
+
+  .class-desc {
+    width: 96%;
+    margin: 32px 2%;
+    p {
+      margin: 0 0 12px;
+    }
+  }
+
+  .class-benefit {
+    margin: 40px 0;
+    ul {
+      list-style: disc;
+      margin: 16px 0 0;
+      div {
+        background: #fee;
+      }
+      li {
+        margin: 0 2% 0 7%;
+        padding: 8px 0;
+      }
+    }
+  }
+
+  .class-syllabus {
+    margin: 40px 0;
+    p {
+      font-size: 90%;
+      margin: 16px 2% 0;
+    }
+    ul {
+      list-style: decimal;
+      div {
+        background: #eee;
+      }
+      li {
+        margin: 0 0 0 9%;
+        padding: 8px 0;
+      }
+    }
+  }
+
+  .class-schedule {
+    margin: 40px 0;
+    img {
+      margin: 16px 0;
+    }
+    p {
+      text-align: center;
+    }
+    table {
+      width: 98%;
+      margin: 16px 1%;
+      border: 1px solid $color;
+      tr {
+        border-bottom: 1px solid $color;
+        &:last-child {
+          border-bottom: none;
+        }
+        th {
+          padding: 8px 2%;
+          text-align: center;
+          border-right: 1px solid $color;
+          background: #fee;
+        }
+        td {
+          padding: 8px 2%;
+        }
+      }
+    }
+  }
+
+  .class-lecturer {
+    p {
+      margin: 0 2%;
+    }
+    .class-lecturer-table {
+      margin: 12px 0 24px;
+      padding: 0 0 12px;
+      border-bottom: 1px solid #fee;
+      p {
+        font-weight: bold;
+      }
+      table {
+        width: 96%;
+        margin: 8px 2%;
+        border: 1px solid $color;
+        tr {
+          &:nth-child(even) {
+            background: #fee;
+          }
+          th {
+            border-right: 1px solid $color;
+            padding: 8px 2%;
+            text-align: center;
+          }
+          td {
+            padding: 8px 2%;
+          }
+        }
+      }
+      .class-lecturer-venue {
+        p:nth-child(odd) {
+          font-weight: normal;
+        }
+      }
+    }
+  }
+
+  .class-fees {
+    margin: 0 2% 40px;
+    table {
+      border: 1px solid $color;
+      tr {
+        text-align: center;
+        th {
+          background: #fee;
+          padding: 8px 2%;
+          border-right: 1px solid $color;
+          text-align: center;
+          font-weight: bold;
+        }
+        td {
+          padding: 8px 2%;
+          border-right: 1px solid $color;
+          border-top: 1px solid $color;
+        }
+      }
+    }
+  }
+
+  .venue-radio {
+    .wpcf7-list-item {
+      display: block;
+      margin: 6px 0 12px 2%;
+    }
+  }
+
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .class-catch {
+    background-image: url('../image/class_catch.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 40px 0 60px;
+    .class-pageTtl {
+      color: #ed1941;
+      font-size: 250%;
+      font-weight: bold;
+      margin: 0 0 0 5%;
+      line-height: 1em;
+    }
+  }
+
+  .class-desc {
+    width: 96%;
+    margin: 32px 2%;
+    p {
+      margin: 0 0 12px;
+    }
+  }
+
+  .class-benefit {
+    margin: 40px 0;
+    ul {
+      list-style: disc;
+      margin: 16px 0 0;
+      div {
+        background: #fee;
+      }
+      li {
+        margin: 0 2% 0 7%;
+        padding: 8px 0;
+      }
+    }
+  }
+
+  .class-syllabus {
+    margin: 40px 0;
+    p {
+      font-size: 90%;
+      margin: 16px 2% 0;
+    }
+    ul {
+      list-style: decimal;
+      div {
+        background: #eee;
+      }
+      li {
+        margin: 0 2% 0 9%;
+        padding: 8px 0;
+      }
+    }
+  }
+
+  .class-schedule {
+    margin: 40px 0;
+    img {
+      margin: 16px 0;
+    }
+    p {
+      text-align: center;
+    }
+    table {
+      width: 98%;
+      margin: 16px 1%;
+      border: 1px solid $color;
+      tr {
+        border-bottom: 1px solid $color;
+        &:last-child {
+          border-bottom: none;
+        }
+        th {
+          padding: 8px 2%;
+          text-align: center;
+          border-right: 1px solid $color;
+          background: #fee;
+        }
+        td {
+          padding: 8px 2%;
+        }
+      }
+    }
+  }
+
+  .class-lecturer {
+    p {
+      margin: 0 2%;
+    }
+    .class-lecturer-table {
+      margin: 12px 0 24px;
+      padding: 0 0 12px;
+      border-bottom: 1px solid #fee;
+      p {
+        font-weight: bold;
+      }
+      table {
+        width: 96%;
+        margin: 8px 2%;
+        border: 1px solid $color;
+        tr {
+          &:nth-child(even) {
+            background: #fee;
+          }
+          th {
+            border-right: 1px solid $color;
+            padding: 8px 2%;
+            text-align: center;
+          }
+          td {
+            padding: 8px 2%;
+          }
+        }
+      }
+      .class-lecturer-venue {
+        p:nth-child(odd) {
+          font-weight: normal;
+        }
+      }
+    }
+  }
+
+  .class-fees {
+    margin: 0 2% 40px;
+    table {
+      border: 1px solid $color;
+      tr {
+        text-align: center;
+        th {
+          background: #fee;
+          padding: 8px 2%;
+          border-right: 1px solid $color;
+          text-align: center;
+          font-weight: bold;
+        }
+        td {
+          padding: 8px 2%;
+          border-right: 1px solid $color;
+          border-top: 1px solid $color;
+        }
+      }
+    }
+  }
+
+  .venue-radio {
+    .wpcf7-list-item {
+      display: block;
+      margin: 6px 0 12px 2%;
+    }
+  }
+
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .class-catch {
+    background-image: url('../image/class_catch.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 100px 0 120px;
+    .class-pageTtl {
+      color: #ed1941;
+      font-size: 250%;
+      font-weight: bold;
+      margin: 0 0 0 10%;
+    }
+  }
+
+  .class-desc {
+    width: 96%;
+    margin: 48px 2%;
+    p {
+      margin: 0 0 12px;
+    }
+  }
+
+  .class-benefit {
+    margin: 40px 0;
+    ul {
+      list-style: disc;
+      margin: 32px 0 0;
+      div {
+        background: #fee;
+      }
+      li {
+        margin: 0 7%;
+        padding: 8px 0;
+      }
+    }
+  }
+
+  .class-syllabus {
+    margin: 48px 0;
+    p {
+      font-size: 90%;
+      margin: 16px 5% 0;
+    }
+    ul {
+      list-style: decimal;
+      div {
+        background: #eee;
+      }
+      li {
+        margin: 0 7%;
+        padding: 8px 0;
+      }
+    }
+  }
+
+  .class-schedule {
+    margin: 48px 0;
+    img {
+      width: 60%;
+      margin: 16px 20%;
+    }
+    p {
+      text-align: center;
+    }
+    table {
+      width: 60%;
+      margin: 16px 20%;
+      border: 1px solid $color;
+      tr {
+        border-bottom: 1px solid $color;
+        &:last-child {
+          border-bottom: none;
+        }
+        th {
+          padding: 8px 2%;
+          text-align: center;
+          border-right: 1px solid $color;
+          background: #fee;
+        }
+        td {
+          padding: 8px 3%;
+        }
+      }
+    }
+  }
+
+  .class-lecturer {
+    width: 80%;
+    margin: 0 10%;
+    p {
+      margin: 0 2% 16px;
+    }
+    .class-lecturer-table {
+      margin: 12px 0 24px;
+      padding: 0 0 12px;
+      border-bottom: 1px solid $color;
+      p {
+        font-weight: bold;
+      }
+      table {
+        width: 70%;
+        margin: 8px 15%;
+        border: 1px solid $color;
+        tr {
+          &:nth-child(even) {
+            background: #fee;
+          }
+          th {
+            border-right: 1px solid $color;
+            padding: 8px 2%;
+            text-align: center;
+          }
+          td {
+            padding: 8px 5%;
+          }
+        }
+      }
+      .class-lecturer-venue {
+        p:nth-child(odd) {
+          font-weight: normal;
+        }
+      }
+    }
+  }
+
+  .class-fees {
+    width: 70%;
+    margin: 0 15% 40px;
+    table {
+      width: 100%;
+      border: 1px solid $color;
+      tr {
+        text-align: center;
+        th {
+          background: #fee;
+          padding: 8px 2%;
+          border-right: 1px solid $color;
+          text-align: center;
+          font-weight: bold;
+        }
+        td {
+          padding: 8px 2%;
+          border-right: 1px solid $color;
+          border-top: 1px solid $color;
+        }
+      }
+    }
+  }
+
+  .venue-radio {
+    .wpcf7-list-item {
+      display: block;
+      margin: 6px 0 12px 2%;
+    }
+  }
+
+  .inquiry-venue {
+    width: 60%;
+    float: left;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .class-catch {
+    background-image: url('../image/class_catch.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 140px 0 180px;
+    .class-pageTtl {
+      color: #ed1941;
+      font-size: 350%;
+      font-weight: bold;
+    }
+  }
+
+  .class-desc {
+    margin: 48px 0;
+    p {
+      margin: 0 0 12px;
+    }
+  }
+
+  .class-benefit {
+    margin: 40px 0;
+    ul {
+      list-style: disc;
+      margin: 32px 0 0;
+      div {
+        background: #fee;
+      }
+      li {
+        margin: 0 15%;
+        padding: 8px 0;
+      }
+    }
+  }
+
+  .class-syllabus {
+    margin: 48px 0;
+    p {
+      font-size: 90%;
+      margin: 16px 2% 0;
+    }
+    ul {
+      list-style: decimal;
+      div {
+        background: #eee;
+      }
+      li {
+        margin: 0 15%;
+        padding: 8px 0;
+      }
+    }
+  }
+
+  .class-schedule {
+    margin: 48px 0;
+    img {
+      width: 60%;
+      margin: 16px 20%;
+    }
+    p {
+      text-align: center;
+    }
+    table {
+      width: 60%;
+      margin: 16px 20%;
+      border: 1px solid $color;
+      tr {
+        border-bottom: 1px solid $color;
+        &:last-child {
+          border-bottom: none;
+        }
+        th {
+          padding: 8px 2%;
+          text-align: center;
+          border-right: 1px solid $color;
+          background: #fee;
+        }
+        td {
+          padding: 8px 2%;
+        }
+      }
+    }
+  }
+
+  .class-lecturer {
+    width: 80%;
+    margin: 0 10%;
+    p {
+      margin: 0 2%;
+    }
+    .class-lecturer-table {
+      margin: 12px 0 24px;
+      padding: 0 0 12px;
+      border-bottom: 1px solid $color;
+      p {
+        font-weight: bold;
+      }
+      table {
+        width: 70%;
+        margin: 8px 15%;
+        border: 1px solid $color;
+        tr {
+          &:nth-child(even) {
+            background: #fee;
+          }
+          th {
+            border-right: 1px solid $color;
+            padding: 8px 2%;
+            text-align: center;
+          }
+          td {
+            padding: 8px 5%;
+          }
+        }
+      }
+      .class-lecturer-venue {
+        p:nth-child(odd) {
+          font-weight: normal;
+        }
+      }
+    }
+  }
+
+  .class-fees {
+    width: 60%;
+    margin: 0 20% 40px;
+    table {
+      width: 100%;
+      border: 1px solid $color;
+      tr {
+        text-align: center;
+        th {
+          background: #fee;
+          padding: 8px 2%;
+          border-right: 1px solid $color;
+          text-align: center;
+          font-weight: bold;
+        }
+        td {
+          padding: 8px 2%;
+          border-right: 1px solid $color;
+          border-top: 1px solid $color;
+        }
+      }
+    }
+  }
+}

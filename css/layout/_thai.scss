@@ -1,0 +1,572 @@
+// main: ../default.scss
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .thai {
+    &--visual {
+      &__btn {
+        width: 80%;
+        margin: 24px auto 0;
+        background: $color;
+        color: #fff;
+        text-align: center;
+        padding: 12px 0;
+      }
+    }// .thai--visual
+    &--about {
+      &__wrap {
+        padding: 60px 0;
+      }
+        &__ttl {
+          font-size: 36px;
+          font-weight: bold;
+          text-align: center;
+        }
+        &__cont {
+          width: 94%;
+          margin: 24px auto;
+          p {
+            margin-bottom: 18px;
+          }
+        }
+        &__btn {
+          width: 80%;
+          margin: 24px auto 0;
+          background: $color;
+          color: #fff;
+          text-align: center;
+          padding: 12px 0;
+        }
+    }// .thai--about
+    &--merit {
+      background-image: url('../image/thai_merit.jpg');
+      background-size: cover;
+      background-position: 0 100%;
+      padding: 60px 0 80px;
+      &__ttl {
+        font-size: 36px;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      &__cont {
+        background: #fff;
+        width: 92%;
+        margin: 0 2% 24px;
+        padding: 12px 2%;
+        display: flex;
+        flex-wrap: wrap;
+        &-style {
+          width: 8%;
+        }
+        &-text {
+          width: 92%;
+        }
+      }
+    }// .thai--merit
+    &--wrap {
+      background-image: url('../image/thai_wrap_bg.png');
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+    &--exam {
+      padding: 60px 0 80px;
+      &__ttl {
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1.1;
+      }
+      &__subttl {
+        font-size: 20px;
+        text-align: center;
+        margin: 24px 0 16px;
+      }
+      &__table {
+        width: 94%;
+        margin: 0 auto;
+        table {
+          border: 1px solid $color;
+          padding: 4px;
+          display: block;
+          tr {
+            th {
+              width: 20%;
+              text-align: center;
+              background: #feecee;
+              color: $color;
+              border-bottom: 2px solid #fff;
+            }
+            td {
+              width: 75%;
+              border-bottom: 2px solid #feecee;
+              padding: 8px 0 8px 4%;
+            }
+          }
+        }// table
+      }// .thai--exam__table
+      &__btn {
+        width: 80%;
+        margin: 24px auto 0;
+        background: $color;
+        color: #fff;
+        text-align: center;
+        padding: 12px 0;
+      }
+    }// .thai--exam
+    &--level {
+      padding: 60px 0 80px;
+      &__table {
+        width: 96%;
+        margin: 24px 2% 0;
+        table {
+          width: 98%;
+          border: 1px solid $color;
+          padding: 4px 1%;
+          display: block;
+          font-size: 18px;
+          tbody {
+            border: 1px solid $color;
+          }
+          td {
+            padding: 6px 0;
+            border: 1px solid $color;
+          }
+        }// table
+        &-1st,
+        &-2nd {
+          text-align: center;
+          display: table-cell;
+          line-height: 1.5;
+          width: 8%;
+        }
+        &-3rd {
+          padding: 5px 2%;
+        }
+      }// .thai--level__table
+    }// .thai--level
+    &--text {
+      padding: 60px 0 80px;
+      &__wrap {
+        width: 94%;
+        margin: 0 auto;
+      }
+        &__img {
+          display: none;
+        }
+        &__cont {
+          &-ttl {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 12px;
+          }
+          &-img {
+            width: 70%;
+            max-width: 300px;
+            margin: 20px auto 12px;
+          }
+          &-table {
+            table {
+              width: 98%;
+              max-width: 630px;
+              margin: 0 auto;
+              border: 1px solid $color;
+              padding: 4px;
+              display: block;
+              tr {
+                width: 100%;
+              }
+              th {
+                background: #feecee;
+                color: $color;
+                text-align: center;
+                padding: 4px 0;
+              }
+              td {
+                text-align: center;
+                border: 1px solid #feecee;
+                padding: 4px 0;
+              }
+            }
+            &__1st {
+              width: 30%;
+            }
+            &__2nd {
+              width: 50%;
+            }
+            &__3rd {
+              width: 30%;
+            }
+          }// .thai--text__cont-table
+          &-btn {
+            width: 80%;
+            margin: 24px auto 0;
+            background: $color;
+            color: #fff;
+            text-align: center;
+            padding: 12px 0;
+          }
+        }// .thai--text__cont
+    }// .thai--text
+    &--faq {
+      padding: 80px 0 60px;
+      background-image: url('../image/thai_faq_bg.jpg');
+      background-size: cover;
+      background-position: 50% 0;
+      &__ttl {
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+      }
+      &__subttl {
+        width: 96%;
+        margin: 12px auto;
+        background: #feecee;
+        padding: 12px 0;
+        font-size: 24px;
+        text-align: center;
+      }
+      &__wrap {
+        width: 96%;
+        margin: 0 auto;
+        background: #fff;
+        border: 1px solid #feecee;
+        border-bottom: 8px solid #feecee;
+        &-cont {
+          padding: 16px 0 16px 5%;
+          border-bottom: 2px solid #feecee;
+        }
+        &-q {
+          color: $color;
+          margin-bottom: 12px;
+        }
+      }
+    }// .thai--faq
+    &--contact {
+      background: #e1e1e1;
+      padding: 40px 0;
+      &__wrap {
+        background: #fff;
+        width: 94%;
+        margin: 0 auto;
+        padding: 40px 0;
+      }
+        &__ttl {
+          font-size: 36px;
+          font-weight: bold;
+          text-align: center;
+        }
+        &__form {
+          width: 94%;
+          margin: 16px auto;
+          .wpcf7-list-item {
+            display: block;
+            margin-bottom: 4px;
+          }
+        }
+    }
+  }// .thai
+}
+@media screen and (min-width: 769px) {
+  .thai {
+    &--visual {
+      position: relative;
+      &__btn {
+        position: absolute;
+        bottom: 62px;
+        left: 11%;
+        background: $color;
+        color: #fff;
+        padding: 8px 50px;
+      }
+    }// .thai--visual
+    &--about {
+      background-image: url('../image/thai_about.png');
+      background-size: cover;
+      background-position: 0% 50%;
+      &__wrap {
+        width: 55%;
+        max-width: 680px;
+        margin: 0 5% 0 auto;
+        padding: 80px 0;
+      }
+        &__ttl {
+          font-size: 32px;
+          font-weight: bold;
+        }
+        &__cont {
+          margin: 24px 0;
+          line-height: 1.5;
+          p {
+            margin-bottom: 18px;
+          }
+        }
+        &__btn {
+          width: 260px;
+          background: $color;
+          color: #fff;
+          padding: 8px 0;
+          text-align: center;
+          display: inline-block;
+        }
+    }// .thai--about
+    &--merit {
+      background-image: url('../image/thai_merit.jpg');
+      background-size: cover;
+      background-position: 50% 100%;
+      padding: 160px 0 80px;
+      &__ttl {
+        font-size: 40px;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        width: 960px;
+        margin: 0 auto;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+        &__cont {
+          background: #fff;
+          width: 260px;
+          padding: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          &-m {
+            margin: 0 30px;
+          }
+          &-style {
+            width: 30px;
+          }
+          &-text {
+            width: 230px;
+          }
+        }
+    }// .thai--merit
+    &--wrap {
+      background-image: url('../image/thai_wrap_bg.png');
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+    &--exam {
+      padding: 80px 0;
+      &__ttl {
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+      }
+      &__subttl {
+        font-size: 28px;
+        text-align: center;
+        margin: 24px 0 16px;
+      }
+      &__table {
+        width: 900px;
+        margin: 0 auto;
+        table {
+          width: 890px;
+          border: 1px solid $color;
+          padding: 4px;
+          display: block;
+          tr {
+            th {
+              width: 200px;
+              text-align: center;
+              padding: 6px 0;
+              background: #feecee;
+              color: $color;
+              border-bottom: 2px solid #fff;
+            }
+            td {
+              width: 620px;
+              border-bottom: 2px solid #feecee;
+              padding-left: 80px;
+            }
+          }
+        }
+      } // .tahi--exam__table
+      &__btn {
+        width: 260px;
+        background: $color;
+        color: #fff;
+        padding: 8px;
+        text-align: center;
+        margin: 40px auto 0;
+        display: inline-block;
+      }
+    } // .thai--exam
+    &--level {
+      padding: 80px 0;
+      &__table {
+        width: 900px;
+        margin: 40px auto 0;
+        table {
+          width: 890px;
+          border: 1px solid $color;
+          padding: 4px;
+          display: block;
+          font-size: 16px;
+          tbody {
+            border: 1px solid #feecee;
+          }
+          td {
+            padding: 6px 0;
+            border: 1px solid #feecee;
+          }
+        }
+        &-1st {
+          width: 100px;
+          text-align: center;
+          display: table-cell;
+          vertical-align: middle;
+        }
+        &-2nd {
+          width: 180px;
+          text-align: center;
+          display: table-cell;
+          vertical-align: middle;
+        }
+        &-3rd {
+          width: 610px;
+          padding: 6px 40px !important;
+        }
+      }// .thai--level__table
+    }// .thai--level
+    &--text {
+      padding: 80px 0;
+      &__wrap {
+        width: 880px;
+        margin: 0 auto;
+        display: table;
+      }
+        &__img {
+          width: 300px;
+        }
+        &__cont {
+          display: table-cell;
+          vertical-align: middle;
+          &-ttl {
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+          }
+          &-table {
+            width: 440px;
+            margin: 32px auto;
+            table {
+              width: 430px;
+              border: 1px solid $color;
+              padding: 4px;
+              display: block;
+              tr {
+                width: 430px;
+              }
+              th {
+                background: #feecee;
+                color: $color;
+                text-align: center;
+                padding: 4px 0;
+              }
+              td {
+                text-align: center;
+                border: 1px solid #feecee;
+                padding: 4px 0;
+              }
+            }
+            &__1st,
+            &__3rd {
+              width: 140px;
+            }
+            &__2nd {
+              width: 150px;
+            }
+          }// .thai--text__cont-table
+          &-btn {
+            width: 440px;
+            margin: 0 auto;
+            background: $color;
+            color: #fff;
+            padding: 8px 0;
+            text-align: center;
+            display: inline-block;
+          }
+        }// .thai--text__cont
+    }// .thai--text
+    &--faq {
+      padding: 100px 0 120px;
+      margin-top: 40px;
+      background-image: url('../image/thai_faq_bg.jpg');
+      background-size: cover;
+      background-position: 50% 0;
+      &__ttl {
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+      }
+      &__subttl {
+        width: 880px;
+        margin: 40px auto 0;
+        background: #feecee;
+        padding: 12px 0 12px 80px;
+        font-size: 24px;
+      }
+      &__wrap {
+        width: 960px;
+        margin: 12px auto 0;
+        background: #fff;
+        border: 1px solid #feecee;
+        border-bottom: 8px solid #feecee;
+        &-cont {
+          padding: 16px 0 16px 60px;
+          border-bottom: 2px solid #feecee;
+        }
+        &-q {
+          color: $color;
+        }
+      }
+    }// .thai--faq
+    &--contact {
+      background: #e1e1e1;
+      padding: 80px 0;
+      &__wrap {
+        background: #fff;
+        width: 960px;
+        margin: 0 auto;
+        padding: 60px 0;
+      }
+        &__ttl {
+          font-size: 40px;
+          font-weight: bold;
+          text-align: center;
+        }
+        &__form {
+          width: 580px;
+          margin: 24px auto;
+          .wpcf7-list-item {
+            display: block;
+          }
+        }
+      .wpcf7-form-control-wrap {
+        margin: 0 auto;
+        a {
+          color: #000;
+          text-decoration: underline;
+        }
+      }
+      .inquiry-p p {
+        width: 380px;
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        textarea {
+          width: 380px;
+        }
+      }
+    }// .thai--contact
+    &--inquiry-ttl {
+      width: 200px;
+    }
+  } // .thai
+}

@@ -1,0 +1,58 @@
+// main: ../default.scss
+.mistakes-cont {
+  p {
+    text-align: center;
+  }
+  table {
+    border: 1px solid $color;
+    margin-top: 32px;
+    font-size: 80%;
+    tr {
+      &:nth-child(even) {
+        background: #fef;
+      }
+      th {
+        text-align: center;
+        background: #fee;
+        border-bottom: 1px solid $color;
+        border-right: 1px solid $color;
+        padding: 8px 1%;
+        &:first-child {
+          width: 11%;
+        }
+        &:nth-child(2) {
+          width: 20%;
+        }
+      }
+      td {
+        text-align: center;
+        border-right: 1px solid $color;
+        padding: 8px 1%;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+@media screen and (min-width: 481px) {
+  .mistakes-cont {
+    width: 98%;
+    margin: 0 1%;
+  }
+}
+@media screen and (min-width: 769px) {
+  .mistakes-cont {
+    width: 90%;
+    margin: 0 5%;
+    table tr th:first-child {
+      width: 6%;
+    }
+    table tr th:nth-child(3) {
+      width: 37%;
+    }
+    table tr td {
+      padding: 8px 0;
+    }
+  }
+}
+@media screen and (min-width: 1025px) {
+}

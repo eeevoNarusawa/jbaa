@@ -1,0 +1,618 @@
+// main: ../default.scss
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .seminar-catch {
+    background-image: url('../image/seminar_catch.png');
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 40px 0 80px;
+    .seminar-pageTtl {
+      color: #ed1941;
+      font-size: 250%;
+      font-weight: bold;
+      margin: 0 0 0 5%;
+    }
+  }
+
+  .seminar-desc {
+    width: 96%;
+    margin: 32px 2%;
+    p {
+      margin: 0 0 12px;
+    }
+  }
+
+  .seminar-benefit {
+    margin: 40px 0;
+    img {
+      width: 92%;
+      margin: 24px 4% 16px;
+    }
+    p {
+      width: 96%;
+      margin: 0 2% 12px;
+    }
+    ul {
+      list-style: square;
+      margin: 16px 0 0;
+      div {
+        background: #fee;
+      }
+      li {
+        margin: 0 0 0 7%;
+        padding: 8px 0;
+      }
+    }
+  }
+
+  .seminar-schedule {
+    .seminar-schedule-desc{
+      text-align: center;
+      font-size: 90%;
+      margin: 12px 0 8px;
+    }
+    p {
+      margin: 0 2%;
+    }
+    .seminar-schedule-table {
+      border: 1px solid $color;
+      width: 96%;
+      margin: 12px 2%;
+      text-align: center;
+      padding: 8px 0;
+      p {
+        font-size: 90%;
+        padding: 4px 0;
+        strong {
+          font-size: 120%;
+          color: $color;
+          font-weight: bold;
+        }
+        &:nth-child(even){
+          background: #fee;
+        }
+      }
+    }
+  }
+
+  .seminar-syllabus {
+    margin: 40px 0 0;
+    p {
+      margin: 0 2%;
+    }
+    ul {
+      list-style: disc;
+      margin: 16px 0 4px;
+      div {
+        background: #fee;
+      }
+      li {
+        margin: 0 0 0 10%;
+        padding: 4px 0;
+      }
+    }
+    img {
+      width: 92%;
+      margin: 0 4%;
+    }
+  }
+
+  .seminar-lecturer {
+    margin: 40px 2% 0;
+    .seminar-lecturer-teacher {
+      margin: 0 0 24px;
+      img {
+        width: 60%;
+        margin: 0 20%;
+        border-radius: 50%;
+      }
+      p {
+        text-align: center;
+        font-size: 110%;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .seminar-fees{
+    margin: 40px 2%;
+    .seminar-fees-table {
+      border: 1px solid $color;
+      .seminar-fees-cont {
+        padding: 12px 0;
+        &:nth-child(1) {
+          border-bottom: 1px solid $color;
+        }
+        .seminar-fees-place {
+          text-align: center;
+          line-height: 1;
+          p:nth-child(1) {
+            font-size: 120%;
+          }
+        }
+        .seminar-fees-price {
+          text-align: center;
+          font-size: 140%;
+          font-weight: bold;
+          margin: 12px 0;
+        }
+        .seminar-fees-note {
+          margin: 0 3%;
+        }
+      }
+    }
+    .seminar-fees-list {
+      margin: 16px 0 0;
+      ul {
+        list-style: disc;
+        li {
+          margin: 0 0 0 7%;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .seminar-catch {
+    background-image: url('../image/seminar_catch.png');
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 40px 0 120px;
+    .seminar-pageTtl {
+      color: #ed1941;
+      font-size: 250%;
+      font-weight: bold;
+      margin: 0 0 0 5%;
+    }
+  }
+
+  .seminar-desc {
+    width: 96%;
+    margin: 32px 2% 48px;
+    p {
+      margin: 0 0 12px;
+    }
+  }
+
+  .seminar-benefit {
+    margin: 48px 0;
+    img {
+      width: 92%;
+      margin: 16px 4% 16px;
+    }
+    p {
+      width: 96%;
+      margin: 0 2% 12px;
+    }
+    ul {
+      list-style: square;
+      margin: 16px 0 0;
+      div {
+        background: #fee;
+      }
+      li {
+        margin: 0 0 0 7%;
+        padding: 8px 0;
+      }
+    }
+  }
+
+  .seminar-schedule {
+    .seminar-schedule-desc{
+      text-align: center;
+      font-size: 90%;
+      margin: 12px 0 8px;
+    }
+    p {
+      margin: 0 2%;
+    }
+    .seminar-schedule-table {
+      border: 1px solid $color;
+      width: 96%;
+      margin: 12px 2%;
+      text-align: center;
+      padding: 8px 0;
+      p {
+        font-size: 90%;
+        padding: 4px 0;
+        strong {
+          font-size: 120%;
+          color: $color;
+          font-weight: bold;
+        }
+        &:nth-child(even){
+          background: #fee;
+        }
+      }
+    }
+  }
+
+  .seminar-syllabus {
+    margin: 40px 0 0;
+    p {
+      margin: 0 2%;
+    }
+    ul {
+      list-style: disc;
+      margin: 16px 0 4px;
+      div {
+        background: #fee;
+      }
+      li {
+        margin: 0 0 0 10%;
+        padding: 4px 0;
+      }
+    }
+    img {
+      width: 92%;
+      margin: 0 4%;
+    }
+  }
+
+  .seminar-lecturer {
+    margin: 40px 2% 0;
+    .seminar-lecturer-teacher {
+      margin: 0 0 40px;
+      img {
+        width: 60%;
+        margin: 0 20%;
+        border-radius: 50%;
+      }
+      p {
+        text-align: center;
+        font-size: 110%;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .seminar-fees{
+    margin: 40px 2%;
+    .seminar-fees-table {
+      border: 1px solid $color;
+      .seminar-fees-cont {
+        padding: 12px 0;
+        &:nth-child(1) {
+          border-bottom: 1px solid $color;
+        }
+        .seminar-fees-place {
+          text-align: center;
+          line-height: 1;
+          p:nth-child(1) {
+            font-size: 120%;
+          }
+        }
+        .seminar-fees-price {
+          text-align: center;
+          font-size: 140%;
+          font-weight: bold;
+          margin: 12px 0;
+        }
+        .seminar-fees-note {
+          margin: 0 3%;
+        }
+      }
+    }
+    .seminar-fees-list {
+      margin: 16px 0 0;
+      ul {
+        list-style: disc;
+        li {
+          margin: 0 0 0 7%;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .seminar-catch {
+    background-image: url('../image/seminar_catch.png');
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 100px 0 120px;
+    .seminar-pageTtl {
+      color: #ed1941;
+      font-size: 250%;
+      font-weight: bold;
+      margin: 0 0 0 10%;
+    }
+  }
+
+  .seminar-desc {
+    width: 96%;
+    margin: 48px 2%;
+    p {
+      margin: 0 0 12px;
+    }
+  }
+
+  .seminar-benefit {
+    margin: 40px 0;
+    img {
+      width: 60%;
+      margin: 24px 20% 16px;
+    }
+    p {
+      width: 96%;
+      margin: 0 2% 12px;
+    }
+    ul {
+      list-style: square;
+      margin: 16px 0 0;
+      div {
+        background: #fee;
+      }
+      li {
+        margin: 0 0 0 7%;
+        padding: 8px 0;
+      }
+    }
+  }
+
+  .seminar-schedule {
+    .seminar-schedule-desc{
+      text-align: center;
+      font-size: 90%;
+      margin: 12px 0 8px;
+    }
+    p {
+      margin: 0 2%;
+    }
+    .seminar-schedule-table {
+      border: 1px solid $color;
+      width: 96%;
+      margin: 12px 2%;
+      text-align: center;
+      padding: 8px 0;
+      p {
+        font-size: 90%;
+        padding: 4px 0;
+        strong {
+          font-size: 120%;
+          color: $color;
+          font-weight: bold;
+        }
+        &:nth-child(even){
+          background: #fee;
+        }
+      }
+    }
+  }
+
+  .seminar-syllabus {
+    margin: 40px 0 0;
+    p {
+      text-align: center;
+    }
+    ul {
+      list-style: disc;
+      margin: 16px 0 4px;
+      div {
+        background: #fee;
+      }
+      li {
+        margin: 0 0 0 38%;
+        padding: 4px 0;
+      }
+    }
+    img {
+      width: 50%;
+      float: left;
+    }
+  }
+
+  .seminar-lecturer {
+    margin: 40px 0 0;
+    padding: 0 2%;
+    .seminar-lecturer-teacher {
+      margin: 24px 0 0;
+      width: 33.333%;
+      float: left;
+      img {
+        width: 60%;
+        margin: 0 20%;
+        border-radius: 50%;
+      }
+      p {
+        text-align: center;
+        font-size: 110%;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .seminar-fees{
+    margin: 40px 2%;
+    .seminar-fees-table {
+      border: 1px solid $color;
+      .seminar-fees-cont {
+        width: 50%;
+        float: left;
+        padding: 12px 0;
+        &:nth-child(2) {
+          border-left: 1px solid $color;
+          box-sizing: border-box;
+        }
+        .seminar-fees-place {
+          text-align: center;
+          line-height: 1;
+          p:nth-child(1) {
+            font-size: 120%;
+          }
+        }
+        .seminar-fees-price {
+          text-align: center;
+          font-size: 140%;
+          font-weight: bold;
+          margin: 12px 0;
+        }
+        .seminar-fees-note {
+          margin: 0 3%;
+        }
+      }
+    }
+    .seminar-fees-list {
+      margin: 16px 0 0;
+      ul {
+        list-style: disc;
+        li {
+          margin: 0 0 0 5%;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1025px) {
+  .seminar-catch {
+    background-image: url('../image/seminar_catch.png');
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 140px 0 180px;
+    .seminar-pageTtl {
+      color: #ed1941;
+      font-size: 350%;
+      font-weight: bold;
+    }
+  }
+
+  .seminar-desc {
+    margin: 48px 0;
+    p {
+      margin: 0 0 12px;
+    }
+  }
+
+  .seminar-benefit {
+    margin: 40px 0;
+    img {
+      width: 60%;
+      margin: 24px 20% 16px;
+    }
+    p {
+      width: 96%;
+      margin: 0 2% 12px;
+    }
+    ul {
+      list-style: square;
+      margin: 16px 0 0;
+      div {
+        background: #fee;
+      }
+      li {
+        margin: 0 0 0 7%;
+        padding: 8px 0;
+      }
+    }
+  }
+
+  .seminar-schedule {
+    .seminar-schedule-desc{
+      text-align: center;
+      font-size: 90%;
+      margin: 12px 0 8px;
+    }
+    p {
+      margin: 0 2%;
+    }
+    .seminar-schedule-table {
+      border: 1px solid $color;
+      width: 96%;
+      margin: 12px 2%;
+      text-align: center;
+      padding: 8px 0;
+      p {
+        font-size: 90%;
+        padding: 4px 0;
+        strong {
+          font-size: 120%;
+          color: $color;
+          font-weight: bold;
+        }
+        &:nth-child(even){
+          background: #fee;
+        }
+      }
+    }
+  }
+
+  .seminar-syllabus {
+    margin: 40px 0 0;
+    p {
+      text-align: center;
+    }
+    ul {
+      list-style: disc;
+      margin: 16px 0 4px;
+      div {
+        background: #fee;
+      }
+      li {
+        margin: 0 0 0 38%;
+        padding: 4px 0;
+      }
+    }
+    img {
+      width: 50%;
+      float: left;
+    }
+  }
+
+  .seminar-lecturer {
+    margin: 40px 0 0;
+    .seminar-lecturer-teacher {
+      margin: 24px 0 0;
+      width: 33.333%;
+      float: left;
+      img {
+        width: 60%;
+        margin: 0 20%;
+        border-radius: 50%;
+      }
+      p {
+        text-align: center;
+        font-size: 110%;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .seminar-fees{
+    margin: 40px 2%;
+    .seminar-fees-table {
+      border: 1px solid $color;
+      .seminar-fees-cont {
+        width: 50%;
+        float: left;
+        padding: 12px 0;
+        &:nth-child(1) {
+          border-right: 1px solid $color;
+          box-sizing: border-box;
+        }
+        .seminar-fees-place {
+          text-align: center;
+          line-height: 1;
+          p:nth-child(1) {
+            font-size: 120%;
+          }
+        }
+        .seminar-fees-price {
+          text-align: center;
+          font-size: 140%;
+          font-weight: bold;
+          margin: 12px 0;
+        }
+        .seminar-fees-note {
+          margin: 0 3%;
+        }
+      }
+    }
+    .seminar-fees-list {
+      margin: 16px 0 0;
+      ul {
+        list-style: disc;
+        li {
+          margin: 0 0 0 14%;
+        }
+      }
+    }
+  }
+}

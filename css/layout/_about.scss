@@ -1,0 +1,155 @@
+// main: ../default.scss
+@media screen and (min-width: 0px) {
+  .about-catch {
+    background-image: url('../image/about_catch.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 40px 0 80px;
+    .about-pageTtl {
+      color: #ed1941;
+      font-size: 250%;
+      font-weight: bold;
+      margin: 0 0 0 5%;
+    }
+  }
+
+  .about-desc {
+    width: 96%;
+    margin: 32px 2%;
+    p {
+      margin: 0 0 12px;
+    }
+  }
+
+  .about-benefit {
+    margin: 40px 0;
+    ul {
+      list-style: square;
+      margin: 16px 0 0;
+      div {
+        background: #fee;
+      }
+      li {
+        margin: 0 2% 0 7%;
+        padding: 8px 0;
+      }
+    }
+  }
+
+  .about-association {
+    width: 96%;
+    margin: 40px 2%;
+    img {
+      margin: 8px 0 16px;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+  }
+
+  .about-outline {
+    margin: 40px 0;
+    .about-outline-cont {
+      margin: 8px 0;
+      padding: 8px 2%;
+      &:nth-child(even) {
+        background: #fee;
+      }
+      h5 {
+        font-weight: bold;
+        font-size: 110%;
+      }
+    }
+  }
+
+  .about-level {
+    margin: 40px 0 0;
+    table {
+      width: 98%;
+      margin: 0 1%;
+      border: 1px solid $color;
+      tr {
+        border-bottom: 1px solid $color;
+        th {
+          padding: 8px 2%;
+          text-align: center;
+          background: #fee;
+        }
+        td {
+          padding: 8px 2%;
+        }
+      }
+    }
+  }
+
+}
+@media screen and (min-width: 481px) {
+  .about-catch {
+    padding: 40px 0 120px;
+  }
+
+  .about-benefit {
+    margin: 48px 0;
+  }
+
+  .about-association {
+    img {
+      width: 92%;
+      margin: 16px 4%;
+    }
+  }
+
+  .about-outline {
+    .about-outline-cont {
+      padding: 8px 10%;
+    }
+  }
+}
+@media screen and (min-width: 769px) {
+  .about-catch {
+    padding: 100px 0 120px;
+    .about-catchTtl {
+      margin: 0 0 0 10%;
+    }
+  }
+
+  .about-desc {
+    margin: 48px 2%;
+  }
+
+  .about-association {
+    img {
+      width: 60%;
+      margin: 24px 20% 16px;
+    }
+  }
+}
+@media screen and (min-width: 1025px) {
+  .about-catch {
+    padding: 140px 0 180px;
+    .about-pageTtl {
+      font-size: 350%;
+      margin: 0;
+    }
+  }
+
+  .about-desc {
+    width: inherit;
+    margin: 48px 0;
+  }
+
+  .about-association {
+    width: 100%;
+    margin: 40px 0;
+    img {
+      width: 60%;
+      margin: 24px 20% 16px;
+    }
+  }
+
+  .about-outline {
+    .about-outline-cont {
+      padding: 8px 15%;
+    }
+  }
+}

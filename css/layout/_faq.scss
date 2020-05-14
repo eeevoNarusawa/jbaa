@@ -1,0 +1,133 @@
+// main: ../default.scss
+@media screen and (min-width: 0px) {
+  .faq-catch {
+    background-image: url('../image/faq_catch.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 40px 0 80px;
+    .faq-pageTtl {
+      color: #ed1941;
+      font-size: 250%;
+      font-weight: bold;
+      margin: 0 0 0 5%;
+    }
+  }
+
+  .faq-cont {
+    margin: 0 0 40px;
+    .faq-cont-details {
+      margin: 0 0 12px;
+      .questions {
+        background: #fee;
+        padding: 8px 2%;
+        .more-icon {
+          text-align: center;
+          font-size: 80%;
+          margin: 8px 0 0;
+          color: $color;
+          font-weight: bold;
+        }
+      }
+      .answers {
+        padding: 8px 2%;
+        display: none;
+      }
+      .q, .a {
+        font-weight: bold;
+        float: left;
+        margin: 0 5% 0 0;
+        width: 5%;
+      }
+      .question, .answer {
+        width: 90%;
+        float: left;
+        a {
+          color: #000;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    p {
+      text-align: center;
+      a {
+        color: $color;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .faq-inquiry {
+    width: 80%;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 12px 0;
+    color: #fff;
+    background: $color;
+    border-radius: 30px;
+  }
+
+}
+@media screen and (min-width: 481px) {
+  .faq-catch {
+    padding: 40px 0 120px;
+  }
+
+  .faq-cont {
+    margin: 0 0 60px;
+    .questions:hover {
+      cursor: pointer;
+    }
+    p {
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+@media screen and (min-width: 769px) {
+  .faq-catch {
+    padding: 100px 0 120px;
+  }
+
+  .faq-cont {
+    margin: 40px 0 60px;
+    .faq-cont-details {
+      margin: 12px 0;
+      .questions {
+        padding: 8px 12%;
+      }
+      .answers {
+        padding: 8px 12%;
+      }
+      .q, .a {
+        margin: inherit;
+      }
+      .question, .answer {
+        width: 95%;
+      }
+    }
+  }
+
+  .faq-inquiry {
+    width: 50%;
+    padding: 16px 0;
+    border-radius: 40px;
+    border-bottom: 4px solid #ad0101;
+    &:hover {
+      border-bottom: 2px solid #ad0101;
+      margin: 2px 0 0;
+    }
+  }
+}
+@media screen and (min-width: 1025px) {
+  .faq-catch {
+    padding: 140px 0 180px;
+    .faq-pageTtl {
+      font-size: 350%;
+      margin: inherit;
+    }
+  }
+}

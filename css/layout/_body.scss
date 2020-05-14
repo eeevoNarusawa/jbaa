@@ -1,0 +1,175 @@
+// main: ../default.scss
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+.clearfix {
+  min-height: 1px;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+* html .clearfix {
+  height: 1px;
+}
+a{
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+body{
+  font-family: Lato, "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+/* iphone submit css reset */
+input[type="submit"],
+input[type="button"] {
+  border-radius: 10px;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+input[type="submit"]::-webkit-search-decoration,
+input[type="button"]::-webkit-search-decoration {
+  display: none;
+}
+input[type="submit"]::focus,
+input[type="button"]::focus {
+  outline-offset: -2px;
+}
+input,
+textarea {
+  border: 1px solid #9f9f9f;
+}
+.center {
+  text-align: center;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  body {
+    font-size: 5vw;
+    line-height: 1.4em;
+  }
+
+  /* slide in */
+  .anm_mod {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+    transition: all 1s ease;
+    &.left {
+      transform: translate3d(-100%, 0, 0);
+    }
+    &.right {
+      transform: translate3d(100%, 0, 0);
+    }
+    &.delay {
+      transition: all 2s ease;
+    }
+    &.fast {
+      transition: all 0.8 ease;
+    }
+  }
+
+  .animation .anm_mod.active {
+   opacity: 1;
+   transform: translate3d(0, 0, 0);
+  }
+
+  .cont-ttl {
+    font-size: 200%;
+    text-align: center;
+    font-weight: bold;
+    color: $color;
+    margin: 0 0 12px;
+    line-height: 1.1em;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  body {
+    font-size: 4.5vw;
+    line-height: 1.4em;
+  }
+
+  /* slide in */
+  .anm_mod {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+    transition: all 1s ease;
+    &.left {
+      transform: translate3d(-100%, 0, 0);
+    }
+    &.right {
+      transform: translate3d(100%, 0, 0);
+    }
+    &.delay {
+      transition: all 2s ease;
+    }
+    &.fast {
+      transition: all 0.8 ease;
+    }
+  }
+
+  .animation .anm_mod.active {
+   opacity: 1;
+   transform: translate3d(0, 0, 0);
+  }
+
+  .cont-ttl {
+    font-size: 200%;
+    text-align: center;
+    font-weight: bold;
+    color: $color;
+    margin: 0 0 16px;
+    line-height: 1.1em;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 20px;
+    line-height: 1.4em;
+  }
+
+  .cont-ttl {
+    font-size: 240%;
+    text-align: center;
+    font-weight: bold;
+    color: $color;
+    margin: 0 0 16px;
+  }
+  .sp {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  body {
+    font-size: 20px;
+    line-height: 1.8em;
+  }
+
+  .container {
+    width: 1024px;
+    margin: 0 auto;
+  }
+
+  .cont-ttl {
+    font-size: 240%;
+    text-align: center;
+    font-weight: bold;
+    color: $color;
+    margin: 0 0 16px;
+  }
+  .sp {
+    display: none;
+  }
+}

@@ -1,0 +1,232 @@
+// main: ../default.scss
+
+.screen-reader-response {
+  display: none;
+}
+.wpcf7-validation-errors {
+  margin: 16px 0 0;
+  color: $color;
+  font-size: 90%;
+  text-align: center;
+}
+.wpcf7-mail-sent-ok {
+  margin: 16px 0 0;
+  color: #28d400;
+  text-align: center;
+}
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .inquiry {
+    width: 96%;
+    margin: 0 2%;
+    background: #ebebeb;
+    padding: 32px 0;
+  }
+
+    .inquiry-cont-ttl {
+      font-size: 200%;
+      text-align: center;
+      font-weight: bold;
+      color: #ed1941;
+    }
+
+    .inquiry-form {
+      width: 90%;
+      margin: 24px 5% 0;
+    }
+
+      .inquiry-p {
+        margin: 0 0 .7em;
+      }
+
+        .inquiry-ttl {
+          width: 40%;
+        }
+
+        .wpcf7-text {
+          height: 2em;
+          width: 100%;
+        }
+
+        .wpcf7-textarea {
+          width: 100%;
+        }
+
+        .wpcf7-list-item {
+          margin: 0 1em 0 0;
+        }
+
+        .wpcf7-submit {
+          width: 60%;
+          margin: 24px 20% 0;
+          background: #ed1941;
+          color: #fff;
+          padding: 8px 0;
+          text-align: center;
+          font-size: 160%;
+          font-weight: bold;
+        }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  /* inquiry-form */
+  .inquiry {
+    width: 96%;
+    margin: 0 2%;
+    background: #ebebeb;
+    padding: 32px 0;
+  }
+
+    .inquiry-cont-ttl {
+      font-size: 200%;
+      text-align: center;
+      font-weight: bold;
+      color: #ed1941;
+    }
+
+    .inquiry-form {
+      width: 90%;
+      margin: 24px 5% 0;
+    }
+
+      .inquiry-p {
+        margin: 0 0 .7em;
+      }
+
+        .inquiry-ttl {
+          width: 40%;
+        }
+
+        .wpcf7-text {
+          height: 2em;
+          width: 100%;
+        }
+
+        .wpcf7-textarea {
+          width: 100%;
+        }
+
+        .wpcf7-list-item {
+          margin: 0 1em 0 0;
+        }
+
+        .wpcf7-submit {
+          width: 60%;
+          margin: 24px 20% 0;
+          background: #ed1941;
+          color: #fff;
+          padding: 8px 0;
+          text-align: center;
+          font-size: 160%;
+          font-weight: bold;
+        }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* inquiry-form */
+  .inquiry {
+    width: 96%;
+    margin: 0 auto;
+    background: #ebebeb;
+    padding: 80px 0;
+  }
+
+    .inquiry-cont-ttl {
+      font-size: 200%;
+      text-align: center;
+      font-weight: bold;
+      color: #ed1941;
+    }
+
+    .inquiry-form {
+      width: 60%;
+      margin: 24px 20% 0;
+    }
+
+      .inquiry-p {
+        margin: 0 0 .7em;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+        .inquiry-ttl {
+          width: 40%;
+          float: left;
+        }
+
+        .wpcf7-text {
+          height: 2em;
+        }
+
+        .wpcf7-list-item {
+          margin: 0 1em 0 0;
+        }
+
+        .wpcf7-submit {
+          width: 50%;
+          margin: 24px 25% 0;
+          background: #ed1941;
+          color: #fff;
+          padding: 8px 0;
+          text-align: center;
+          font-size: 160%;
+          font-weight: bold;
+        }
+}
+
+@media screen and (min-width: 1025px) {
+  /* inquiry-form */
+  .inquiry {
+    background: #ebebeb;
+    padding: 80px 0;
+  }
+
+    .inquiry-cont-ttl {
+      font-size: 240%;
+      text-align: center;
+      font-weight: bold;
+      color: #ed1941;
+    }
+
+    .inquiry-form {
+      width: 50%;
+      margin: 24px 25% 0;
+    }
+
+    #class-inquiry {
+      .inquiry-form {
+        width: 60%;
+        margin: 24px 20% 0;
+      }
+    }
+
+      .inquiry-p {
+        margin: 0 0 .7em;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+        .inquiry-ttl {
+          width: 26%;
+          float: left;
+        }
+
+        .wpcf7-text {
+          height: 2em;
+        }
+
+        .wpcf7-list-item {
+          margin: 0 1em 0 0;
+        }
+
+        .wpcf7-submit {
+          width: 40%;
+          margin: 24px 30% 0;
+          background: #ed1941;
+          color: #fff;
+          padding: 8px 0;
+          text-align: center;
+          font-size: 160%;
+          font-weight: bold;
+        }
+}

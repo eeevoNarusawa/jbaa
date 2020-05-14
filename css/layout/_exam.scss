@@ -1,0 +1,343 @@
+// main: ../default.scss
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .exam-eyecatch {
+    background-image: url('../image/exam_eyecatch.png');
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 40px 0 80px;
+  }
+
+    .exam-pageTtl {
+      color: #ed1941;
+      font-size: 250%;
+      font-weight: bold;
+      margin: 0 0 0 5%;
+    }
+
+  .exam-about {
+    background: #ed1941;
+    color: #fff;
+    padding: 32px 0;
+  }
+
+    .exam-about-ttl {
+      font-size: 200%;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .exam-about-desc {
+      width: 96%;
+      margin: 16px 2% 0;
+      div {
+        margin: 0 0 12px;
+      }
+      table {
+        border: 1px solid #fff;
+        tr {
+          padding: 4px 0;
+          border-top: 1px solid #fff;
+          th {
+            border-right: 1px solid #fff;
+            padding: 0 1%;
+            width: 28%;
+            background: #ad0101;
+          }
+          td {
+            padding: 0 1%;
+          }
+        }
+      }
+    }
+
+  .exam-benefits {
+    width: 96%;
+    margin: 0 2%;
+    padding: 32px 0;
+  }
+
+    .exam-benefits-ttl {
+      font-size: 200%;
+      text-align: center;
+      font-weight: bold;
+      color: #ed1941;
+    }
+
+    .exam-benefits-cont-ttls {
+      display: none;
+    }
+
+      .sp-exam-benefits-cont-ttl {
+        font-size: 120%;
+        text-align: center;
+        font-weight: bold;
+        color: #ed1941;
+      }
+
+      .exam-benefits-cont {
+        width: 96%;
+        margin: 32px 2% 0;
+      }
+
+        .exam-benefits-cont-desc {
+          text-align: center;
+        }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .exam-eyecatch {
+    background-image: url('../image/exam_eyecatch.png');
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 40px 0 120px;
+  }
+
+    .exam-pageTtl {
+      color: #ed1941;
+      font-size: 250%;
+      font-weight: bold;
+      margin: 0 0 0 5%;
+    }
+
+  .exam-about {
+    background: #ed1941;
+    color: #fff;
+    padding: 32px 0;
+  }
+
+    .exam-about-ttl {
+      font-size: 200%;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .exam-about-desc {
+      width: 96%;
+      margin: 16px 2% 0;
+      div {
+        margin: 0 0 16px;
+      }
+      table {
+        border: 1px solid #fff;
+        tr {
+          border-top: 1px solid #fff;
+          th {
+            border-right: 1px solid #fff;
+            padding: 8px 1%;
+            width: 30%;
+            background: #ad0101;
+          }
+          td {
+            padding: 8px 1%;
+          }
+        }
+      }
+    }
+
+  .exam-benefits {
+    width: 96%;
+    margin: 0 2%;
+    padding: 32px 0;
+  }
+
+    .exam-benefits-ttl {
+      font-size: 200%;
+      text-align: center;
+      font-weight: bold;
+      color: #ed1941;
+    }
+
+    .exam-benefits-cont-ttls {
+      display: none;
+    }
+
+      .exam-benefits-cont {
+        width: 96%;
+        margin: 32px 2% 0;
+      }
+
+        .sp-exam-benefits-cont-ttl {
+          font-size: 120%;
+          text-align: center;
+          font-weight: bold;
+          color: #ed1941;
+        }
+
+        .exam-benefits-cont-img {
+          width: 80%;
+          margin: 12px 10% 0;
+        }
+        .exam-benefits-cont-desc {
+          text-align: center;
+        }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .exam-eyecatch {
+    background-image: url('../image/exam_eyecatch.png');
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 100px 0 120px;
+  }
+
+    .exam-pageTtl {
+      color: #ed1941;
+      font-size: 250%;
+      font-weight: bold;
+      margin: 0 0 0 10%;
+    }
+
+  .exam-about {
+    background: #ed1941;
+    color: #fff;
+    padding: 64px 0;
+  }
+
+    .exam-about-ttl {
+      font-size: 200%;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .exam-about-desc {
+      width: 96%;
+      margin: 32px 2% 0;
+      div {
+        margin: 0 0 16px;
+      }
+      table {
+        border: 1px solid #fff;
+        tr {
+          border-top: 1px solid #fff;
+          th {
+            border-right: 1px solid #fff;
+            padding: 12px 1%;
+            width: 30%;
+            background: #ad0101;
+          }
+          td {
+            padding: 12px 1%;
+          }
+        }
+      }
+    }
+
+  .exam-benefits {
+    padding: 80px 0;
+  }
+
+    .exam-benefits-ttl {
+      font-size: 200%;
+      text-align: center;
+      font-weight: bold;
+      color: #ed1941;
+    }
+
+    .exam-benefits-conts {
+      margin: 32px 0 0;
+    }
+
+      .exam-benefits-cont {
+        width: 98%;
+        margin: 0 1%;
+      }
+
+        .sp-exam-benefits-cont-ttl {
+          font-size: 120%;
+          text-align: center;
+          font-weight: bold;
+          color: #ed1941;
+        }
+
+        .exam-benefits-cont-img {
+          width: 60%;
+          margin: 12px 20% 24px;
+        }
+
+        .exam-benefits-cont-desc {
+          text-align: center;
+        }
+}
+
+@media screen and (min-width: 1025px) {
+  .exam-eyecatch {
+    background-image: url('../image/exam_eyecatch.png');
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 140px 0 180px;
+  }
+
+    .exam-pageTtl {
+      color: #ed1941;
+      font-size: 350%;
+      font-weight: bold;
+    }
+
+  .exam-about {
+    background: #ed1941;
+    color: #fff;
+    padding: 80px 0;
+  }
+
+    .exam-about-ttl {
+      font-size: 240%;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .exam-about-desc {
+      margin: 32px 0 0;
+      div {
+        margin: 0 0 16px;
+        text-align: center;
+      }
+      table {
+        margin: 0 auto;
+        border: 1px solid #fff;
+        tr {
+          border-top: 1px solid #fff;
+          th {
+            border-right: 1px solid #fff;
+            padding: 12px 1%;
+            width: 30%;
+            background: #ad0101;
+            text-align: center;
+          }
+          td {
+            padding: 12px 1%;
+          }
+        }
+      }
+    }
+
+  .exam-benefits {
+    padding: 80px 0;
+  }
+
+    .exam-benefits-ttl {
+      font-size: 240%;
+      text-align: center;
+      font-weight: bold;
+      color: #ed1941;
+    }
+
+    .exam-benefits-conts {
+      margin: 32px 0 0;
+    }
+
+      .sp-exam-benefits-cont-ttl {
+        font-size: 120%;
+        text-align: center;
+        font-weight: bold;
+        color: #ed1941;
+      }
+
+      .exam-benefits-cont-img {
+        width: 50%;
+        margin: 12px 25% 24px;
+      }
+
+      .exam-benefits-cont-desc {
+        text-align: center;
+      }
+}

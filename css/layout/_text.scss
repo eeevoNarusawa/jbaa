@@ -1,0 +1,434 @@
+// main: ../default.scss
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .textbook-eyecatch {
+    background-image: url('../image/sp_textbook_eyecatch.png');
+    background-size: cover;
+    background-position: 50% 50%;
+    color: #fff;
+    padding: 40px 0 80px;
+  }
+
+    .textbook-pageTtl {
+      font-size: 250%;
+      font-weight: bold;
+      margin: 0 0 0 5%;
+    }
+
+  .textbook-desc {
+    width: 96%;
+    margin: 32px 2%;
+    p {
+      margin: 0 0 12px;
+    }
+  }
+
+  .textbook-conts {
+    display: none;
+  }
+
+  .sp-textbook-conts {
+    width: 96%;
+    border: 2px solid #e1e1e1;
+    box-sizing: border-box;
+    padding: 16px 2%;
+    margin: 0 2% 32px;
+    .textbook-copy {
+      ul {
+        list-style: disc;
+        padding: 0 0 0 7%;
+        li {
+          margin: 8px 0;
+        }
+      }
+    }
+  }
+
+    .textbook-cont-ttl {
+      color: #ed1941;
+      font-size: 200%;
+      margin: 0 0 16px;
+    }
+
+    .textbook-cont-details {
+      margin: 16px 0 0;
+    }
+
+      .textbook-cont-img {
+        width: 60%;
+        float: left;
+        margin: 0 4% 0 0;
+      }
+
+      .textbook-cont-priceDetails {
+        width: 36%;
+        float: left;
+      }
+
+        .textbook-cont-price {
+          background: #ebebeb;
+          border: 1px solid #acacac;
+          text-align: center;
+          font-size: 120%;
+          padding: 4px 0;
+          margin: 16px 0;
+        }
+
+        .textbook-cont-icon {
+          width: 60px;
+          font-size: 30px;
+          color: #fff;
+          text-align: center;
+          margin: 32px auto;
+          a {
+            color: #fff;
+          }
+        }
+
+          .fa-shopping-cart {
+            width: 100%;
+            padding: 15px 0;
+            background: #f05665;
+            border-radius: 50%;
+          }
+          .fa-envelope {
+            width: 100%;
+            padding: 15px 0;
+            background: #f99d1b;
+            border-radius: 50%
+          }
+
+    .textbook-details-img {
+      background: #e6e7e8;
+      padding: 16px 2.5% 8px;
+      img {
+        width: 18%;
+        margin: 0 1%;
+        float: left;
+      }
+    }
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .textbook-eyecatch {
+    background-image: url('../image/sp_textbook_eyecatch.png');
+    background-size: cover;
+    background-position: 50% 50%;
+    color: #fff;
+    padding: 40px 0 120px;
+  }
+
+    .textbook-pageTtl {
+      font-size: 250%;
+      font-weight: bold;
+      margin: 0 0 0 5%;
+    }
+
+  .textbook-desc {
+    width: 96%;
+    margin: 32px 2%;
+    p {
+      margin: 0 0 12px;
+    }
+  }
+
+  .textbook-conts {
+    display: none;
+  }
+
+  .sp-textbook-conts {
+    width: 96%;
+    border: 2px solid #e1e1e1;
+    box-sizing: border-box;
+    padding: 16px 2%;
+    margin: 0 2% 32px;
+    .textbook-copy {
+      ul {
+        list-style: disc;
+        padding: 0 0 0 7%;
+        li {
+          margin: 8px 0;
+        }
+      }
+    }
+  }
+
+    .textbook-cont-ttl {
+      color: #ed1941;
+      font-size: 200%;
+      margin: 0 0 16px;
+    }
+
+    .textbook-cont-details {
+      margin: 16px 0 0;
+    }
+
+      .textbook-cont-img {
+        width: 60%;
+        float: left;
+        margin: 0 4% 0 0;
+      }
+
+      .textbook-cont-priceDetails {
+        width: 36%;
+        float: left;
+      }
+
+        .textbook-cont-price {
+          background: #ebebeb;
+          border: 1px solid #acacac;
+          text-align: center;
+          font-size: 120%;
+          padding: 4px 0;
+          margin: 16px 0;
+        }
+
+        .textbook-cont-icon {
+          width: 60px;
+          font-size: 30px;
+          color: #fff;
+          text-align: center;
+          margin: 32px auto;
+          a {
+            color: #fff;
+          }
+        }
+
+          .fa-shopping-cart {
+            width: 100%;
+            padding: 15px 0;
+            background: #f05665;
+            border-radius: 50%;
+          }
+          .fa-envelope {
+            width: 100%;
+            padding: 15px 0;
+            background: #f99d1b;
+            border-radius: 50%
+          }
+
+    .textbook-details-img {
+      background: #e6e7e8;
+      padding: 16px 2.5% 8px;
+      img {
+        width: 18%;
+        margin: 0 1%;
+        float: left;
+      }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .textbook-eyecatch {
+    background-image: url('../image/textbook_eyecatch.png');
+    background-size: cover;
+    background-position: 62% 50%;
+    color: #fff;
+    padding: 100px 0 120px;
+  }
+
+    .textbook-pageTtl {
+      font-size: 250%;
+      font-weight: bold;
+      margin: 0 0 0 10%;
+    }
+
+  .textbook-desc {
+    width: 96%;
+    margin: 48px 2%;
+    p {
+      margin: 0 0 12px;
+    }
+  }
+
+  .sp-textbook-conts {
+    display: none;
+  }
+
+  .textbook-conts {
+    width: 96%;
+    border: 2px solid #e1e1e1;
+    box-sizing: border-box;
+    padding: 16px 2%;
+    margin: 0 2% 48px;
+  }
+
+    .textbook-cont {
+      display: flex;
+    }
+
+    .textbook-cont-img {
+      width: 30%;
+      margin: 0 4% 0 0;
+    }
+
+    .textbook-cont-details {
+      width: 66%;
+      position: relative;
+    }
+
+      .textbook-cont-ttl {
+        color: #ed1941;
+        font-size: 200%;
+        margin: 16px 0;
+      }
+
+      .textbook-cont-priceDetails {
+        position: absolute;
+        left: 0;
+        bottom: 30px;
+        width: 100%;
+      }
+
+        .textbook-cont-price {
+          width: 40%;
+          float: left;
+          background: #ebebeb;
+          border: 1px solid #acacac;
+          text-align: center;
+          font-size: 140%;
+          padding: 4px 0;
+          margin: 8px 10% 0 0;
+        }
+
+        .textbook-cont-icon {
+          width: 60px;
+          float: left;
+          font-size: 30px;
+          color: #fff;
+          text-align: center;
+          margin: 0 5% 0 0;
+          a {
+            color: #fff;
+          }
+        }
+
+          .fa-shopping-cart {
+            width: 100%;
+            padding: 15px 0;
+            background: #f05665;
+            border-radius: 50%;
+          }
+          .fa-envelope {
+            width: 100%;
+            padding: 15px 0;
+            background: #f99d1b;
+            border-radius: 50%
+          }
+
+    .textbook-details-img {
+      background: #e6e7e8;
+      padding: 16px 10% 8px;
+      img {
+        width: 16%;
+        margin: 0 2%;
+        float: left;
+      }
+    }
+}
+
+@media screen and (min-width: 1025px) {
+  .textbook-eyecatch {
+    background-image: url('../image/textbook_eyecatch.png');
+    background-size: cover;
+    background-position: 70% 50%;
+    color: #fff;
+    padding: 140px 0 180px;
+  }
+
+    .textbook-pageTtl {
+      font-size: 350%;
+      font-weight: bold;
+    }
+
+  .textbook-desc {
+    margin: 48px 0;
+    p {
+      margin: 0 0 12px;
+    }
+  }
+
+  .sp-textbook-conts {
+    display: none;
+  }
+
+  .textbook-conts {
+    border: 2px solid #e1e1e1;
+    box-sizing: border-box;
+    padding: 16px 2%;
+    margin: 0 0 48px;
+  }
+
+    .textbook-cont {
+      display: flex;
+    }
+
+    .textbook-cont-img {
+      width: 30%;
+      margin: 0 4% 0 0;
+    }
+
+    .textbook-cont-details {
+      width: 66%;
+      position: relative;
+    }
+
+      .textbook-cont-ttl {
+        color: #ed1941;
+        font-size: 200%;
+        margin: 40px 0 32px;
+      }
+
+      .textbook-cont-priceDetails {
+        position: absolute;
+        left: 0;
+        bottom: 50px;
+        width: 100%;
+      }
+
+        .textbook-cont-price {
+          width: 30%;
+          float: left;
+          background: #ebebeb;
+          border: 1px solid #acacac;
+          text-align: center;
+          font-size: 160%;
+          padding: 4px 0;
+          margin: 8px 10% 0 0;
+        }
+
+        .textbook-cont-icon {
+          width: 60px;
+          float: left;
+          font-size: 30px;
+          color: #fff;
+          text-align: center;
+          margin: 0 5% 0 0;
+          a {
+            color: #fff;
+          }
+        }
+
+          .fa-shopping-cart {
+            width: 100%;
+            padding: 15px 0;
+            background: #f05665;
+            border-radius: 50%;
+          }
+          .fa-envelope {
+            width: 100%;
+            padding: 15px 0;
+            background: #f99d1b;
+            border-radius: 50%
+          }
+
+    .textbook-details-img {
+      background: #e6e7e8;
+      padding: 16px 15% 8px;
+      img {
+        width: 16%;
+        margin: 0 2%;
+        float: left;
+      }
+    }
+}

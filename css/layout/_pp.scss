@@ -1,0 +1,49 @@
+// main: ../default.scss
+@media screen and (min-width: 0px) {
+  .pp-catch {
+    background-image: url('../image/pp_eyecatch.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 66px 0 80px;
+    margin: 0 0 24px;
+  }
+
+  .pp-cont {
+    p {
+      margin: 12px 2%;
+    }
+    ul {
+      margin: 24px 0;
+      div {
+        background: #fee;
+      }
+      li {
+        padding: 6px 2% 12px;
+        p {
+          font-weight: bold;
+        }
+        ul {
+          li {
+            padding: 12px 2% 0 5%;
+            line-height: 1.1em;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 481px) {
+  .pp-catch {
+    padding: 128px 0 80px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .pp-catch {
+    padding: 140px 0 120px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .pp-catch {
+    padding: 236px 0 180px;
+  }
+}

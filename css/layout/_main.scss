@@ -1,0 +1,915 @@
+// main: ../default.scss
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  /* top共通 */
+  .ttl {
+    font-size: 200%;
+    font-weight: bold;
+    color: #ed1941;
+    text-align: center;
+  }
+
+  /* exam/textBook */
+  .top-exam {
+    position: relative;
+    margin: 0 0 230px;
+  }
+
+    .top-exam-bg {
+      display: none;
+    }
+
+    .top-exam-img {
+      width: 80%;
+    }
+
+    .top-exam-desc {
+      position: absolute;
+      left: 20%;
+      top: 100px;
+      width: 74%;
+      background: #ed1941;
+      color: #fff;
+      padding: 12px 3%;
+    }
+
+      .top-exam-desc-ttl {
+        font-weight: bold;
+        font-size: 200%;
+        margin: 0 0 12px;
+      }
+
+      .top-exam-desc-more {
+        background: #fff;
+        color: #ed1941;
+        width: 46%;
+        margin: 12px auto 0;
+        padding: 8px 0;
+        text-align: center;
+        font-weight: bold;
+      }
+
+  .top-textBook {
+    position: relative;
+    margin: 0 0 35%;
+  }
+
+    .top-textBook-desc {
+      width: 74%;
+      background: #ed1941;
+      color: #fff;
+      padding: 12px 3%;
+    }
+
+      .top-textBook-desc-ttl {
+        font-weight: bold;
+        font-size: 200%;
+        margin: 0 0 12px;
+      }
+
+      .top-textBook-desc-more {
+        background: #fff;
+        color: #ed1941;
+        width: 46%;
+        margin: 12px 0 0;
+        padding: 8px 0;
+        text-align: center;
+        font-weight: bold;
+      }
+
+    .top-textBook-img {
+      width: 60%;
+      position: absolute;
+      right: 0;
+      bottom: -42%;
+    }
+
+  /* seminar */
+  .course {
+    background: #f1f2f2;
+    padding: 32px 0;
+  }
+    .top-class-cont {
+      margin: 48px 0 0;
+    }
+
+    .course-desc {
+      width: 96%;
+      margin: 16px 2%;
+    }
+
+    .course-img {
+      width: 96%;
+      margin: 0 2%;
+    }
+
+    .course-more {
+      display: inline-block;
+      width: 60%;
+      margin: 16px auto 0;
+      padding: 8px 0;
+      color: #fff;
+      text-align: center;
+      font-weight: bold;
+      background: #ed1941;
+    }
+
+  /* about */
+  .about {
+    padding: 32px 0;
+  }
+
+    .about-desc {
+      width: 96%;
+      margin: 16px 2%;
+    }
+
+    .about-cont {
+      width: 90%;
+      margin: 0 5% 40px;
+      position: relative;
+    }
+
+      .about-submit {
+        position: absolute;
+        left: 0;
+        bottom: -16px;
+        width: 70%;
+        margin: 0 15%;
+        padding: 8px 0;
+        color: #fff;
+        text-align: center;
+        font-weight: bold;
+        background: #ed1941;
+        a {
+          color: #fff;
+        }
+      }
+
+  // mistakes
+  .mistakes {
+    width: 96%;
+    margin-bottom: 24px;
+    text-align: center;
+    a {
+      color: #ed1941;
+    }
+  }
+
+  /* faq */
+  .faq {
+    padding: 32px 0 0;
+  }
+
+    .faq-ttl {
+      font-size: 200%;
+      font-weight: bold;
+      color: #ed1941;
+      text-align: center;
+      margin: 0 0 24px;
+    }
+
+  /* quiz */
+  .quiz {
+    width: 96%;
+    margin: 0 2%;
+  }
+
+    .quiz-submit {
+      width: 80%;
+      margin: 24px 10% 0;
+      padding: 16px 0;
+      color: #fff;
+      text-align: center;
+      font-weight: bold;
+      font-size: 120%;
+      background: #ed1941;
+      a {
+        color: #fff;
+      }
+    }
+
+    .quiz-link {
+      margin: 24px 0 0;
+      font-size: 120%;
+      text-align: center;
+      a {
+        color: #231f20;
+      }
+    }
+
+    .quiz-qr {
+      display: none;
+    }
+
+    .quiz-logo {
+      width: 60%;
+      margin: 24px 20% 0;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  /* top共通 */
+  .ttl {
+    font-size: 200%;
+    font-weight: bold;
+    color: #ed1941;
+    text-align: center;
+  }
+
+  /* exam/textBook */
+  .top-exam {
+    position: relative;
+    margin: 0 0 200px;
+  }
+
+    .top-exam-bg {
+      display: none;
+    }
+
+    .top-exam-img {
+      width: 80%;
+    }
+
+    .top-exam-desc {
+      position: absolute;
+      left: 20%;
+      top: 100px;
+      width: 74%;
+      background: #ed1941;
+      color: #fff;
+      padding: 16px 3%;
+    }
+
+      .top-exam-desc-ttl {
+        font-weight: bold;
+        font-size: 200%;
+        margin: 0 0 12px;
+      }
+
+      .top-exam-desc-more {
+        background: #fff;
+        color: #ed1941;
+        width: 46%;
+        margin: 12px auto 0;
+        padding: 8px 0;
+        text-align: center;
+        font-weight: bold;
+      }
+
+  .top-textBook {
+    position: relative;
+    margin: 0 0 40%;
+  }
+
+    .top-textBook-desc {
+      width: 74%;
+      background: #ed1941;
+      color: #fff;
+      padding: 16px 3%;
+    }
+
+      .top-textBook-desc-ttl {
+        font-weight: bold;
+        font-size: 200%;
+        margin: 0 0 12px;
+      }
+
+      .top-textBook-desc-more {
+        background: #fff;
+        color: #ed1941;
+        width: 46%;
+        margin: 12px 0 0;
+        padding: 8px 0;
+        text-align: center;
+        font-weight: bold;
+      }
+
+    .top-textBook-img {
+      width: 60%;
+      position: absolute;
+      right: 0;
+      bottom: -52%;
+    }
+
+  /* seminar */
+  .course {
+    background: #f1f2f2;
+    padding: 32px 0;
+  }
+    .top-class-cont {
+      margin: 60px 0 0;
+    }
+
+    .course-desc {
+      width: 96%;
+      margin: 16px 2%;
+    }
+
+    .course-img {
+      width: 80%;
+      margin: 0 10%;
+    }
+
+    .course-more {
+      display: inline-block;
+      width: 50%;
+      margin: 16px auto 0;
+      padding: 8px 0;
+      color: #fff;
+      text-align: center;
+      font-weight: bold;
+      background: #ed1941;
+    }
+
+  /* about */
+  .about {
+    padding: 32px 0;
+  }
+
+    .about-desc {
+      width: 96%;
+      margin: 16px 2%;
+    }
+
+    .about-cont {
+      width: 90%;
+      margin: 0 5% 40px;
+      position: relative;
+    }
+
+      .about-img {
+        width: 80%;
+        margin: 0 10%;
+      }
+
+      .about-submit {
+        position: absolute;
+        left: 0;
+        bottom: -16px;
+        width: 70%;
+        margin: 0 15%;
+        padding: 8px 0;
+        color: #fff;
+        text-align: center;
+        font-weight: bold;
+        background: #ed1941;
+        a {
+          color: #fff;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+  /* faq */
+  .faq {
+    padding: 32px 0 0;
+  }
+
+    .faq-ttl {
+      font-size: 200%;
+      font-weight: bold;
+      color: #ed1941;
+      text-align: center;
+      margin: 0 0 24px;
+    }
+
+  // mistakes
+  .mistakes {
+    width: 96%;
+    margin-bottom: 24px;
+    text-align: center;
+    a {
+      color: #ed1941;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  /* quiz */
+  .quiz {
+    width: 96%;
+    margin: 0 2%;
+  }
+
+    .quiz-submit {
+      width: 80%;
+      margin: 24px 10% 0;
+      padding: 16px 0;
+      color: #fff;
+      text-align: center;
+      font-weight: bold;
+      font-size: 120%;
+      background: #ed1941;
+      a {
+        color: #fff;
+      }
+    }
+
+    .quiz-link {
+      margin: 24px 0 0;
+      font-size: 120%;
+      text-align: center;
+      a {
+        color: #231f20;
+      }
+    }
+
+    .quiz-qr {
+      display: none;
+    }
+
+    .quiz-logo {
+      width: 50%;
+      margin: 24px 25% 0;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* top 共通 */
+  .ttl {
+    font-size: 200%;
+    font-weight: bold;
+    color: #ed1941;
+    text-align: center;
+  }
+
+  /* exam / textBook */
+  .top-exam,
+  .top-textBook {
+    display: flex;
+  }
+
+    .top-exam-img {
+      display: none;
+    }
+
+    .top-exam-bg {
+      width: 50%;
+      background-image: url('../image/exam.png');
+      background-size: cover;
+      background-position: 100% 0%;
+    }
+
+    .top-exam-desc {
+      width: 42%;
+      background: #ed1941;
+      color: #fff;
+      padding: 40px 4%;
+    }
+
+      .top-exam-desc-ttl {
+        font-weight: bold;
+        font-size: 200%;
+        margin: 0 0 24px;
+      }
+
+      .top-exam-desc-more {
+        background: #fff;
+        color: #ed1941;
+        width: 46%;
+        padding: 8px 0;
+        text-align: center;
+        margin: 32px 0 0 54%;
+        font-weight: bold;
+      }
+
+      .top-textBook-desc {
+        width: 42%;
+        background: #ed1941;
+        color: #fff;
+        padding: 40px 4%;
+      }
+
+        .top-textBook-desc-ttl {
+          font-weight: bold;
+          font-size: 200%;
+          margin: 0 0 24px;
+        }
+
+        .top-textBook-desc-more {
+          background: #fff;
+          color: #ed1941;
+          width: 46%;
+          padding: 8px 0;
+          text-align: center;
+          margin: 32px 0 0;
+          font-weight: bold;
+        }
+
+      .top-textBook-img {
+        width: 50%;
+        position: relative;
+        background: #fff;
+      }
+
+        .top-textBook-img img {
+          position: absolute;
+          width: 100%;
+          top: 0;
+          left: -10%;
+        }
+
+  /* seminar */
+  .course {
+    background: #f1f2f2;
+    padding: 80px 0 56px;
+  }
+
+    .seminar-cont {
+      width: 50%;
+      float: left;
+    }
+
+    .top-class-cont {
+      width: 50%;
+      float: left;
+    }
+
+      .course-desc {
+        width: 90%;
+        margin: 24px 5%;
+      }
+
+      .course-img {
+        width: 96%;
+        margin: 0 2%;
+      }
+
+      .course-more {
+        display: inline-block;
+        width: 44%;
+        margin: 24px auto 0;
+        padding: 8px 0;
+        color: #fff;
+        text-align: center;
+        font-weight: bold;
+        background: #ed1941;
+      }
+
+  /* about */
+  .about {
+    padding: 80px 0 56px;
+  }
+
+    .about-desc {
+      width: 96%;
+      margin: 24px 2%;
+    }
+
+      .about-cont {
+        width: 32%;
+        float: left;
+      }
+
+      .about-center-cont {
+        margin: 0 2%;
+      }
+
+        .about-submit {
+          width: 70%;
+          margin: 16px auto 0;
+          padding: 8px 0;
+          color: #fff;
+          text-align: center;
+          font-weight: bold;
+          background: #ed1941;
+          a {
+            color: #fff;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+
+  /* faq */
+  .faq {
+    padding: 80px 0 24px;
+  }
+
+    .faq-ttl {
+      font-size: 200%;
+      font-weight: bold;
+      color: #ed1941;
+      text-align: center;
+      margin: 0 0 24px;
+    }
+
+  // mistakes
+  .mistakes {
+    text-align: center;
+    a {
+      color: #ed1941;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  /* quiz */
+  .quiz {
+    width: 96%;
+    margin: 0 2%;
+    padding: 32px 0;
+  }
+
+    .quiz-info {
+      width: 50%;
+      float: left;
+    }
+
+      .quiz-submit {
+        width: 70%;
+        margin: 24px 0 0;
+        padding: 12px 0;
+        color: #fff;
+        text-align: center;
+        font-weight: bold;
+        font-size: 120%;
+        background: #ed1941;
+        a {
+          color: #fff;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .quiz-link {
+        margin: 24px 0 0;
+        font-size: 120%;
+        a {
+          color: #231f20;
+        }
+      }
+
+    .quiz-qr {
+      width: 25%;
+      float: left;
+      img {
+        width: 70%;
+      }
+    }
+
+    .quiz-logo {
+      width: 25%;
+      float: left;
+      img {
+        width: 70%;
+        margin: 0 15%;
+      }
+    }
+}
+
+@media screen and (min-width: 1025px) {
+  /* top 共通 */
+  .ttl {
+    font-size: 300%;
+    font-weight: bold;
+    color: #ed1941;
+    text-align: center;
+  }
+
+  /* exam/textBook */
+  .top-exam,
+  .top-textBook {
+    display: flex;
+  }
+
+    .top-exam-img {
+      display: none;
+    }
+
+    .top-exam-bg {
+      width: 50%;
+      background-image: url('../image/exam.png');
+      background-size: cover;
+      background-position: 100% 0%;
+    }
+
+    .top-exam-desc {
+      width: 50%;
+      background: #ed1941;
+      color: #fff;
+      padding: 64px 0;
+    }
+
+      .top-exam-desc-ttl {
+        font-weight: bold;
+        font-size: 300%;
+        width: 400px;
+        margin: 0 0 48px 112px;
+      }
+
+      .top-exam-desc-text {
+        width: 400px;
+        margin: 0 0 0 112px;
+      }
+
+      .top-exam-desc-more {
+        background: #fff;
+        color: #ed1941;
+        width: 250px;
+        padding: 12px 0;
+        text-align: center;
+        margin: 32px 0 0 262px;
+        font-weight: bold;
+        font-size: 120%;
+      }
+
+      .top-textBook-desc {
+        width: 50%;
+        background: #ed1941;
+        color: #fff;
+        padding: 64px 0;
+      }
+
+        .top-textBook-desc-ttl {
+          float: right;
+          font-weight: bold;
+          font-size: 300%;
+          width: 400px;
+          margin: 0 112px 48px 0;
+        }
+
+        .top-textBook-desc-text {
+          float: right;
+          width: 400px;
+          margin: 0 112px 0 0;
+        }
+
+        .top-textBook-desc-more {
+          float: right;
+          background: #fff;
+          color: #ed1941;
+          width: 250px;
+          padding: 12px 0;
+          text-align: center;
+          margin: 32px 262px 0 0;
+          font-weight: bold;
+          font-size: 120%;
+        }
+
+      .top-textBook-img {
+        width: 50%;
+        position: relative;
+        background: #fff;
+      }
+
+        .top-textBook-img img {
+          position: absolute;
+          width: 552px;
+          top: 30px;
+          left: -40px;
+        }
+
+  /* seminar */
+  .course {
+    background: #f1f2f2;
+    padding: 100px 0 64px;
+  }
+
+    .seminar-cont {
+      width: 50%;
+      float: left;
+    }
+
+    .top-class-cont {
+      width: 50%;
+      float: left;
+    }
+
+      .course-desc {
+        width: 90%;
+        margin: 24px 5%;
+      }
+
+      .course-img {
+        width: 96%;
+        margin: 0 2%;
+      }
+
+      .course-more {
+        display: inline-block;
+        width: 250px;
+        margin: 24px auto 0;
+        padding: 12px 0;
+        color: #fff;
+        text-align: center;
+        font-weight: bold;
+        font-size: 120%;
+        background: #ed1941;
+      }
+
+  /* about */
+  .about {
+    padding: 100px 0 64px;
+  }
+
+    .about-desc {
+      margin: 24px 0;
+    }
+
+      .about-cont {
+        width: 32%;
+        float: left;
+      }
+
+      .about-center-cont {
+        margin: 0 2%;
+      }
+
+        .about-submit {
+          width: 250px;
+          margin: 24px auto 0;
+          padding: 12px 0;
+          color: #fff;
+          text-align: center;
+          font-weight: bold;
+          font-size: 120%;
+          background: #ed1941;
+          a {
+            color: #fff;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+
+  /* faq */
+  .faq {
+    padding: 100px 0 32px;
+  }
+
+    .faq-ttl {
+      font-size: 200%;
+      font-weight: bold;
+      color: #ed1941;
+      text-align: center;
+      margin: 0 0 24px;
+    }
+
+  // mistakes
+  .mistakes {
+    text-align: center;
+    a {
+      color: #ed1941;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  /* quiz */
+  .quiz {
+    padding: 32px 0;
+  }
+
+    .quiz-info {
+      width: 50%;
+      float: left;
+    }
+
+      .quiz-submit {
+        width: 300px;
+        margin: 24px 0 0;
+        padding: 12px 0;
+        color: #fff;
+        text-align: center;
+        font-weight: bold;
+        font-size: 120%;
+        background: #ed1941;
+        a {
+          color: #fff;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .quiz-link {
+        margin: 32px 0 0;
+        font-size: 120%;
+        a {
+          color: #231f20;
+        }
+      }
+
+    .quiz-qr {
+      width: 25%;
+      float: left;
+      img {
+        width: 70%;
+      }
+    }
+
+    .quiz-logo {
+      width: 25%;
+      float: left;
+      img {
+        width: 70%;
+        margin: 0 15%;
+      }
+    }
+}

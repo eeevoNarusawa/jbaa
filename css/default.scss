@@ -1,0 +1,40 @@
+//compileExpanded
+@charset "utf-8";
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+}
+@media screen and (min-width: 1025px) {
+}
+
+$color: #ed1941;
+
+// ==============================================================
+// Layout
+// ==============================================================
+
+@import "layout/_body";
+@import "layout/_header";
+@import "layout/_footer";
+@import "layout/_main";
+@import "layout/_inquiry";
+
+// ==============================================================
+// Page
+// ==============================================================
+
+@import "layout/_exam";
+@import "layout/_text";
+@import "layout/_seminar";
+@import "layout/_pp";
+@import "layout/_faq";
+@import "layout/_class";
+@import "layout/_about";
+@import "layout/_aboutus";
+@import "layout/_contact";
+@import "layout/_mistakes";
+@import "layout/_entry";
+@import "layout/_thai";

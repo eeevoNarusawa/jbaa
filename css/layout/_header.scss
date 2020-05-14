@@ -1,0 +1,31 @@
+// main: ../default.scss
+
+
+// header
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .logo {
+    width: 40%;
+    margin: 12px 0 0 5%;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .logo {
+    width: 35%;
+    margin: 4px 0 0 5%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .logo {
+    width: 30%;
+    margin: 0 0 0 5%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .logo {
+    width: 230px;
+    margin: 0 0 0 40px;
+  }
+}
